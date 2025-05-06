@@ -23,10 +23,9 @@ export default async function Home() {
   return (
     <div>
       {blogs.map((blog: any) => (
-        <div key={blog.id}>
-          <h1>{blog.Title}</h1>
+        <article key={blog.id}>
           <RenderBlogContent content={blog.Content} />
-        </div>
+        </article>
       ))}
     </div>
   );

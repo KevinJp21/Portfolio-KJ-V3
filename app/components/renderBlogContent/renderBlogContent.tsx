@@ -70,27 +70,69 @@ export default function RenderBlogContent({ content }: { content: any[] }) {
 
       switch (block.type) {
         case "paragraph":
-          elements.push(
-            <p key={i}>
-              {block.children.map((child: any, j: number) =>
-                child.bold ? <strong key={j}>{child.text}</strong> : child.text
-              )}
-            </p>
-          );
+          // Verifica si el párrafo solo contiene un enlace
+          const onlyLink =
+            block.children.length === 3 &&
+            block.children[1]?.type === "link" &&
+            block.children.filter((c: any) => c.type === "link").length === 1;
+
+          if (onlyLink) {
+            const link = block.children[1];
+            elements.push(
+              <a
+                key={i}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.children.map((child: any, j: number) =>
+                  child.bold ? (
+                    <strong key={j}>{child.text}</strong>
+                  ) : (
+                    <span key={j}>{child.text}</span>
+                  )
+                )}
+              </a>
+            );
+          } else {
+            elements.push(
+              <p key={i}>
+                {block.children.map((child: any, j: number) => {
+                  if (child.type === "link") {
+                    return (
+                      <a
+                        key={j}
+                        href={child.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {child.children.map((linkChild: any, k: number) =>
+                          linkChild.bold ? (
+                            <strong key={k}>{linkChild.text}</strong>
+                          ) : (
+                            linkChild.text
+                          )
+                        )}
+                      </a>
+                    );
+                  } else {
+                    return child.bold ? (
+                      <strong key={j}>{child.text}</strong>
+                    ) : (
+                      child.text
+                    );
+                  }
+                })}
+              </p>
+            );
+          }
           break;
         case "heading":
           const level = block.level || 2;
           const Tag = `h${level}` as keyof JSX.IntrinsicElements;
           elements.push(
             <Tag key={i}>
-              {block.children.map((child: any, j: number) => (
-                <span
-                  key={j}
-                  style={{ fontWeight: child.bold ? "bold" : "normal" }}
-                >
-                  {child.text}
-                </span>
-              ))}
+              {block.children.map((child: any, j: number) => child.text)}
             </Tag>
           );
           break;
