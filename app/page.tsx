@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { JSX } from "react";
 import RenderBlogContent from "./components/renderBlogContent/renderBlogContent";
 const fetchBlogs = async () => {
   const reqOptions: RequestInit = {
@@ -20,7 +19,7 @@ export default async function Home() {
   const blogsResponse = await fetchBlogs();
   const blogs = blogsResponse.data;
 
-
+  console.log(blogs);
   return (
     <div>
       {blogs.map((blog: any) => (
