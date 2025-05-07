@@ -8,6 +8,8 @@ export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
   const { setTheme, resolvedTheme } = useTheme()
 
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -24,22 +26,59 @@ export default function ThemeSwitch() {
     />
   )
 
+  const handleDropdownClick = () => {
+    setDropdownOpen(!dropdownOpen)
+  }
+
+  const handleOptionClick = (option: string) => {
+    setTheme(option)
+    setDropdownOpen(false)
+  }
+
+  const optionsTheme = [
+    { label: 'Claro', value: 'light' },
+    { label: 'Oscuro', value: 'dark' },
+    { label: 'Auto', value: 'system' },
+  ];
+
+  const CurrentTheme = localStorage.getItem('theme') || 'system';
+
+  const renderIcon = () => {
+    switch (CurrentTheme) {
+      case 'light':
+        return (<svg>
+          <use href="/assets/Icons/Icons.svg#sun"/>
+        </svg>);
+      case 'dark':
+        return (<svg>
+          <use href="/assets/Icons/Icons.svg#moon"/>
+        </svg>);
+      case 'system':
+      default:
+        return (<svg>
+          <use href="/assets/Icons/Icons.svg#monitor"/>
+        </svg>)
+    }
+  };
+
   return (
-    <div className="relative">
-      <select
-        value={resolvedTheme}
-        onChange={(e) => setTheme(e.target.value)}
-        className="appearance-none bg-transparent border border-[var(--color-Grey)] rounded-lg px-3 py-1 text-[var(--color-Grey-Dark)] cursor-pointer"
-      >
-        <option value="system">Sistema</option>
-        <option value="light">Claro</option>
-        <option value="dark">Oscuro</option>
-      </select>
-      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[var(--color-Grey-Dark)]">
-        <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-        </svg>
-      </div>
+    <div className='relative'>
+        <button title='Theme Switch' className='appearance-none text-[var(--Grey)] flex transition-all duration-300 cursor-pointer [&>svg]:w-6 [&>svg]:h-6 [&>svg]:transition-all [&>svg]:duration-300 [&>svg]:hover:[filter:drop-shadow(0_0_10px_var(--Blue))] [&>svg]:hover:scale-110' onClick={handleDropdownClick}>
+            {renderIcon()}
+        </button>
+        {dropdownOpen && (
+            <ul className='absolute top-8 right-0 w-full p-2.5 min-w-[150px] bg-[var(--NavBar-bg)] shadow-[0_0.5em_1em_#0003] rounded-lg text-[#9fa5b5] backdrop-blur-[10px]'>
+                {optionsTheme.map((option) => (
+                    <li key={option.value} 
+                        className='p-2.5 rounded-[10px] cursor-pointer hover:bg-[#0003]'
+                        onClick={() => handleOptionClick(option.value)}>
+                        <span className='text-sm font-semibold text-[var(--Grey)]'>
+                            {option.label}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+        )}
     </div>
   )
 }

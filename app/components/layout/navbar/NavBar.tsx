@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Link from "next/link";
 export default function NavBar() {
