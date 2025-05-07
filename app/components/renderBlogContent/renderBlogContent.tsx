@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { JSX } from "react";
 export default function RenderBlogContent({ content }: { content: any[] }) {
   const elements = [];
@@ -8,7 +9,7 @@ export default function RenderBlogContent({ content }: { content: any[] }) {
     const block = content[i];
     // Renderizar la imagen si la hay
     if (block.image) {
-      const imageUrl = block.image.formats.large?.url || block.image.url; // Asegurarse de usar 'large' si está disponible
+      const imageUrl = block.image.formats.large?.url || block.image.url;
       elements.push(
         <img
           key={`image-${i}`}
@@ -79,7 +80,7 @@ export default function RenderBlogContent({ content }: { content: any[] }) {
           if (onlyLink) {
             const link = block.children[1];
             elements.push(
-              <a
+              <Link
                 key={i}
                 href={link.url}
                 target="_blank"
@@ -92,7 +93,7 @@ export default function RenderBlogContent({ content }: { content: any[] }) {
                     <span key={j}>{child.text}</span>
                   )
                 )}
-              </a>
+              </Link>
             );
           } else {
             elements.push(
