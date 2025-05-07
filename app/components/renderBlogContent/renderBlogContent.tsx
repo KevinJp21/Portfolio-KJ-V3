@@ -12,7 +12,7 @@ export default function RenderBlogContent({ content }: { content: any[] }) {
       elements.push(
         <img
           key={`image-${i}`}
-          src={process.env.STRAPI_API_URL + imageUrl}
+          src={imageUrl}
           alt={block.image.alternativeText || "Image"}
           width={block.image.formats.large?.width || 1000} // Usar el tamaño 'large' si está disponible
           height={block.image.formats.large?.height || 518} // Usar la altura del formato 'large'

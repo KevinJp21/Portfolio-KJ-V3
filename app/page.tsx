@@ -19,7 +19,6 @@ export default async function Home() {
   const blogsResponse = await fetchBlogs();
   const blogs = blogsResponse.data;
 
-  console.log(blogs);
   return (
     <div>
       {blogs.map((blog: any) => (
