@@ -4,27 +4,35 @@
 
 @theme {
   /* Colores base */
-  --color-Grey: rgba(0, 0, 0, .56);
-  --color-Grey-HoverLinks: rgba(0, 0, 0, .7);
-  --color-Grey-Dark: rgba(0, 0, 0, .8);
-  --color-White: rgba(255, 255, 255, .8);
-  --color-BGWhite: rgba(245, 245, 247, .8);
-  --color-Blue: rgba(0, 122, 255, .8);
-  --color-Blue-Hover: rgba(0, 122, 255, .7);
-  --color-BG-Color-html: #fff;
-  --color-NavBar-bg: rgba(245, 245, 247, .5);
-  --color-NavBar-Shadow: rgb(214, 214, 214);
-  --color-BG-html: radial-gradient(100% 50% at 50% 0%, rgba(0, 163, 255, 0.13) 0, rgba(0, 163, 255, 0) 50%, rgba(0, 163, 255, 0) 100%);
-  --color-imgBG: linear-gradient(0deg, rgb(199, 199, 199) 0%, rgba(245, 245, 247, 0) 70%);
+  --Grey: rgba(0, 0, 0, .56);
+  --Grey-HoverLinks: rgba(0, 0, 0, .7);
+  --Grey-Dark: rgba(0, 0, 0, .8);
+  --White: rgba(255, 255, 255, .8);
+  --BGWhite: rgba(245, 245, 247, .8);
+  --Blue: rgba(0, 122, 255, .8);
+  --Blue-Hover: rgba(0, 122, 255, .7);
+  --BG-html: #fff;
+  --NavBar-bg: rgba(245, 245, 247, .5);
+  --NavBar-Shadow: rgb(214, 214, 214);
+  --BG-html: radial-gradient(100% 50% at 50% 0%, rgba(0, 163, 255, 0.13) 0, rgba(0, 163, 255, 0) 50%, rgba(0, 163, 255, 0) 100%);
+  --imgBG: linear-gradient(0deg, rgb(199, 199, 199) 0%, rgba(245, 245, 247, 0) 70%);
 }
 
 .dark {
-  --color-BG-Color-html: #171717;
-  --color-NavBar-bg: rgba(23, 22, 37, 0.5);
-  --color-NavBar-Shadow: rgba(23, 22, 37, 1);
-  --color-BG-html: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
-  --color-Grey: rgba(255, 255, 255, 0.8);
-  --color-Grey-DarkMode: rgba(0, 0, 0, .56);
-  --color-Grey-Dark: rgba(255, 255, 255, 0.8);
-  --color-imgBG: linear-gradient(0deg, rgba(0, 0, 0, .56) 0%, rgba(245, 245, 247, 0) 70%);
+  --BG-html: #171717;
+  --NavBar-bg: rgba(23, 22, 37, 0.5);
+  --NavBar-Shadow: rgba(23, 22, 37, 1);
+  --BG-html: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
+  --Grey: rgba(255, 255, 255, 0.8);
+  --Grey-DarkMode: rgba(0, 0, 0, .56);
+  --Grey-Dark: rgba(255, 255, 255, 0.8);
+  --imgBG: linear-gradient(0deg, rgba(0, 0, 0, .56) 0%, rgba(245, 245, 247, 0) 70%);
   }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: -apple-system-headline,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif
+}
+
+a,span,p,li {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif
+}
