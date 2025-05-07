@@ -1,5 +1,5 @@
-import RenderBlogContent from "~/components/renderBlogContent/renderBlogContent";
-import { getBlogContent } from "~/services/blogs";
+import RenderBlogContent from "@/components/renderBlogContent/renderBlogContent";
+import { getBlogContent } from "@/services/blogs";
 
 
 export default async function Blogs() {

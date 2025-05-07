@@ -1,4 +1,4 @@
-import { STRAPI_API_KEY, STRAPI_API_URL } from "~/config";
+import { STRAPI_API_KEY, STRAPI_API_URL } from "@/config";
 
 export async function getBlogContent () {
     const res = await fetch(`${STRAPI_API_URL}/api/blogs`, {
