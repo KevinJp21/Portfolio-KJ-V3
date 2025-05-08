@@ -1,26 +1,26 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 import Footer from "./footer/Footer";
 import NavBar from "./navbar/NavBar";
 import FloatNavBar from "./navbar/FloatNavBar";
 import { useTheme } from "next-themes";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const [isClient, setIsClient] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  
-  useEffect(() => {
-    setIsMobile(window.matchMedia("(max-width: 768px)").matches);
 
+  useLayoutEffect(() => {
+    setIsClient(true); // se ejecuta antes del paint
     const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
     const handleMediaChange = (e: MediaQueryListEvent) => {
       setIsMobile(e.matches);
     };
     mediaQuery.addEventListener("change", handleMediaChange);
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaChange);
-    };
+    return () => mediaQuery.removeEventListener("change", handleMediaChange);
   }, []);
-
+  
+  if (!isClient) return null;
   return (
     <>
       <div
