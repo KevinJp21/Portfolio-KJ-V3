@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { JSX } from "react";
+import Image from "next/image";
 export default function RenderBlogContent({ content }: { content: any[] }) {
   const elements = [];
   let currentList: any[] = [];
@@ -11,12 +12,12 @@ export default function RenderBlogContent({ content }: { content: any[] }) {
     if (block.image) {
       const imageUrl = block.image.formats.large?.url || block.image.url;
       elements.push(
-        <img
+        <Image
           key={`image-${i}`}
           src={imageUrl}
           alt={block.image.alternativeText || "Image"}
-          width={block.image.formats.large?.width || 1000} // Usar el tamaño 'large' si está disponible
-          height={block.image.formats.large?.height || 518} // Usar la altura del formato 'large'
+          width={block.image.formats.large?.width || 1000}
+          height={block.image.formats.large?.height || 518}
         />
       );
     }

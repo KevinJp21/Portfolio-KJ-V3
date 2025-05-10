@@ -1,9 +1,8 @@
 "use client";
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import Footer from "./footer/Footer";
 import NavBar from "./navbar/NavBar";
 import FloatNavBar from "./navbar/FloatNavBar";
-import { useTheme } from "next-themes";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isClient, setIsClient] = useState(false);

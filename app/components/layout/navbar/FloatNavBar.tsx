@@ -1,4 +1,5 @@
 import ThemeSwitch from "@/components/ThemeSwitch";
+import Link from "next/link";
 
 export default function FloatNavBar() {
   return (
@@ -8,39 +9,39 @@ export default function FloatNavBar() {
           <div className="w-full h-full">
             <ul className="h-full list-none flex items-center justify-around [&>*]:h-full [&>*]:px-2.5 [&>*]:flex [&>*]:items-center [&>*_a]:h-full [&>*_a]:text-[var(--Grey)] [&>*_a]:transition-normal [&>*_a]:duration-300 [&>*_a]:ease-out [&>*_svg]:h-full [&>*_svg]:fill-[var(--Grey)] [&>*_svg]:transition-all [&>*_svg]:max-w-5 [&>*_svg]:w-full [&>*_svg]:hover:fill-[var(--Blue)] [&>*_svg]:hover:scale-150">
               <li>
-                <a href="/#Start">
+                <Link href="/#Start">
                   <svg>
                     <use href="/assets/Icons/Icons.svg#home" />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#Projects">
+                <Link href="/#Projects">
                   <svg>
                     <use href="/assets/Icons/Icons.svg#project" />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#About">
+                <Link href="/#About">
                   <svg>
                     <use href="/assets/Icons/Icons.svg#about" />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#Skills">
+                <Link href="/#Skills">
                   <svg>
                     <use href="/assets/Icons/Icons.svg#skills" />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#Contact">
+                <Link href="/#Contact">
                   <svg>
                     <use href="/assets/Icons/Icons.svg#contact" />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li className="[&>*_svg]:max-w-6">
                 <ThemeSwitch />
