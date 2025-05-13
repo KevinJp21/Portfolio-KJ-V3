@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 export default function ThemeSwitch() {
+  const t = useTranslations("Header");
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -22,9 +24,9 @@ export default function ThemeSwitch() {
   };
 
   const optionsTheme = [
-    { label: "Claro", value: "light" },
-    { label: "Oscuro", value: "dark" },
-    { label: "Auto", value: "system" },
+    { label: t("BtnThemModeLight"), value: "light" },
+    { label: t("BtnThemModeDark"), value: "dark" },
+    { label: t("BtnThemModeSystem"), value: "system" },
   ];
 
   const renderIcon = () => {
@@ -60,7 +62,7 @@ export default function ThemeSwitch() {
   return (
     <div className="relative">
       <button
-        title="Theme Switch"
+        title={t("BtnThemMode")}
         className="appearance-none text-[var(--Grey)] flex transition-all duration-300 cursor-pointer [&>svg]:w-6 [&>svg]:h-6 [&>svg]:transition-all [&>svg]:duration-300 [&>svg]:hover:[filter:drop-shadow(0_0_10px_var(--Blue))] [&>svg]:hover:scale-110"
         onClick={handleDropdownClick}
       >

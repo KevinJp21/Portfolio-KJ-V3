@@ -1,28 +1,30 @@
 {
     "Header": {
-        "start": "Home",
-        "projects": "Projects",
-        "about_me": "About",
-        "skills": "Skills",
-        "contact": "Contact",
-        "BtnThemMode": "Theme Mode",
-        "BtnTLanguage": "Language"
+        "start": "Inicio",
+        "projects": "Proyectos",
+        "about": "Sobre mí",
+        "skills": "Habilidades",
+        "contact": "Contacto",
+        "BtnThemMode": "Tema",
+        "BtnThemModeLight": "Claro",
+        "BtnThemModeDark": "Oscuro",
+        "BtnThemModeSystem": "Auto",
+        "BtnTLanguage": "Idioma"
     },
     "Home": {
-        "name": "Hey, I'm Kevin Julio",
-        "descStrong": "Systems Engineer focused in Full-Stack Development",
-        "description": ". From Colombia co. specialized in web application development.",
-        "btnCV": "Download CV",
-        "btnContact": "Contact me"
+        "name": "Hey, Soy Kevin Julio",
+        "content": "**Ingeniero de Sistemas enfocado en el Desarrollo Full-Stack**. De Colombia co. Especializado en el desarrollo de aplicaciones web.",
+        "btnCV": "Descargar CV",
+        "btnContact": "Contactame"
     },
     "About": {
-        "title": "About Me",
-        "content": "My name is **Kevin Julio Pineda** and I am a **systems engineer specialized in Full-Stack development**. During my university education, I actively participated in various **technology fairs**, which allowed me to **expand my knowledge and skills** in the field of systems engineering.\n\nThroughout my career, I have **led multiple projects** from the initial phase to deployment, using **agile methodologies** and **design patterns** to ensure that each project is completed efficiently and meets the highest quality standards.\n\nMy goal is to continue growing professionally and contribute to the **creation of innovative technological solutions** that **enhance the user experience**. I am passionate about applying best practices in software development, ensuring the creation of **intuitive and functional applications**."
+        "title": "Acerca de mí",
+        "content": "Mi nombre es **Kevin Julio Pineda** y soy un **ingeniero de sistemas especializado en desarrollo Full-Stack**. Durante mi formación universitaria, participé activamente en diversas **ferias tecnológicas**, lo que me permitió **ampliar mis conocimientos y habilidades** en el campo de la ingeniería de sistemas.\n\nA lo largo de mi carrera, he **dirigido múltiples proyectos** desde la fase inicial hasta el despliegue, utilizando **metodologías ágiles** y **patrones de diseño** para asegurar que cada proyecto se complete de manera eficiente y cumpla con los más altos estándares de calidad.\n\nMi objetivo es seguir creciendo profesionalmente y contribuir a la **creación de soluciones tecnológicas innovadoras** que **mejoren la experiencia del usuario**. Me apasiona aplicar las mejores prácticas en el desarrollo de software, asegurando la creación de **aplicaciones intuitivas y funcionales**."
     },
     "Skills": {
-        "title": "Skills",
-        "SubTitle1": "Languages and Tools",
-        "SubTitle2": "Artificial Intelligence",
-        "SubTitle3": "Others"
+        "title": "Habilidades",
+        "SubTitle1": "Lenguajes y Herramientas",
+        "SubTitle2": "Inteligencia Artificial",
+        "SubTitle3": "Otros"
     }
 }

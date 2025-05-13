@@ -1,6 +1,30 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
+    "Header": {
+        "start": "Home",
+        "projects": "Projects",
+        "about": "About",
+        "skills": "Skills",
+        "contact": "Contact",
+        "BtnThemMode": "Theme",
+        "BtnThemModeLight": "Light",
+        "BtnThemModeDark": "Dark",
+        "BtnThemModeSystem": "System",
+        "BtnTLanguage": "Language"
+    },
+    "Home": {
+        "name": "Hey, I'm Kevin Julio",
+        "content": "**Systems Engineer focused in Full-Stack Development**. From Colombia co. specialized in web application development.",
+        "btnCV": "Download CV",
+        "btnContact": "Contact me"
+    },
+    "About": {
+        "title": "About Me",
+        "content": "My name is **Kevin Julio Pineda** and I am a **systems engineer specialized in Full-Stack development**. During my university education, I actively participated in various **technology fairs**, which allowed me to **expand my knowledge and skills** in the field of systems engineering.\n\nThroughout my career, I have **led multiple projects** from the initial phase to deployment, using **agile methodologies** and **design patterns** to ensure that each project is completed efficiently and meets the highest quality standards.\n\nMy goal is to continue growing professionally and contribute to the **creation of innovative technological solutions** that **enhance the user experience**. I am passionate about applying best practices in software development, ensuring the creation of **intuitive and functional applications**."
+    },
+    "Skills": {
+        "title": "Skills",
+        "SubTitle1": "Languages and Tools",
+        "SubTitle2": "Artificial Intelligence",
+        "SubTitle3": "Others"
     }
-  }
+}

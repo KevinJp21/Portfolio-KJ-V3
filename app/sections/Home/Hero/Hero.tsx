@@ -1,10 +1,12 @@
 import { useTranslations } from "next-intl";
-
+import Markdown from "react-markdown";
 export default function Hero() {
-    const t = useTranslations("HomePage");
+    const t = useTranslations();
     return(
         <div>
-            <h1>{t("title")}</h1>
+            <Markdown>{t("Home.name")}</Markdown>
+            <Markdown>{t("Home.content")}</Markdown>
+            
         </div>
     )
 }
