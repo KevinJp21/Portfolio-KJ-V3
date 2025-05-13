@@ -1,4 +1,5 @@
 import ThemeSwitch from "@/components/ThemeSwitch";
+import LanguageSwitch from "@/components/LanguageSwitch";
 import Link from "next/link";
 
 export default function FloatNavBar() {
@@ -45,6 +46,9 @@ export default function FloatNavBar() {
               </li>
               <li className="[&>*_svg]:max-w-6">
                 <ThemeSwitch />
+              </li>
+              <li className="[&>*_svg]:max-w-6">
+                <LanguageSwitch />
               </li>
             </ul>
           </div>

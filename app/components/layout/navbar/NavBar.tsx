@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import LanguageSwitch from "@/components/LanguageSwitch";
 export default function NavBar() {
   const [scroll, setScroll] = useState(false);
   const t = useTranslations("Header");
@@ -39,6 +40,9 @@ export default function NavBar() {
               </li>
               <li>
                 <ThemeSwitch />
+              </li>
+              <li>
+                <LanguageSwitch />
               </li>
             </ul>
           </div>
