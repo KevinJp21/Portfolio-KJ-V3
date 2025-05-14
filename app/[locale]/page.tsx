@@ -17,22 +17,22 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
   const messages = await getMessages({locale}) as Messages;
   const title = messages.Home.metaData?.title;
   const description = messages.Home.metaData?.description;
-  
+  const url = "https://kevinjp.dev/";
   return {
     title,
     description,
     alternates: {
-      canonical: "https://kevinjp.dev/",
+      canonical: url,
       languages: {
-        "en": "https://kevinjp.dev/en",
-        "es": "https://kevinjp.dev/es",
+        "en": `${url}en`,
+        "es": `${url}es`,
       },
     },
     openGraph: {
       title,
       description,
       images: [
-        {url: "https://kevinjp.dev/og.png"},
+        {url: `${url}og.png`},
       ],
     },
   }
