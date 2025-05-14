@@ -1,13 +1,7 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      }
-    ],
-    "git": {
-      "deploymentEnabled": {
-        "main": false
-      }
+  "git": {
+    "deploymentEnabled": {
+      "main": false
     }
   }
+}
