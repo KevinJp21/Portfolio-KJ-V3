@@ -1,25 +1,26 @@
 "use client";
 import { useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function LanguageSwitch() {
   const t = useTranslations("Header");
-
-  const locale = useLocale();
-  const [currentLocale, setCurrentLocale] = useState(locale);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
 
   const handleDropdownClick = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
   const handleOptionClick = (option: string) => {
-    setCurrentLocale(option);
     setDropdownOpen(false);
-    router.push(`/${option}`);
+    const segments = pathname.split("/");
+    segments[1] = option; 
+    router.push(segments.join("/") || "/");
   };
+
   const optionsTheme = [
     { label: "Español", value: "es" },
     { label: "English", value: "en" },
@@ -28,7 +29,7 @@ export default function LanguageSwitch() {
   return (
     <div className="relative">
       <button
-        title={`${t("BtnTLanguage")}: ${currentLocale === "es" ? "Español" : "English"}`}
+        title={t("BtnTLanguage")}
         className="appearance-none text-[var(--Grey)] flex transition-all duration-300 cursor-pointer [&>svg]:w-6 [&>svg]:h-6 [&>svg]:transition-all [&>svg]:duration-300 [&>svg]:hover:[filter:drop-shadow(0_0_10px_var(--Blue))] [&>svg]:hover:scale-110"
         onClick={handleDropdownClick}
       >
