@@ -15,7 +15,11 @@
         "name": "Hey, I'm Kevin Julio",
         "content": "**Systems Engineer focused in Full-Stack Development**. From Colombia co. specialized in web application development.",
         "btnCV": "Download CV",
-        "btnContact": "Contact me"
+        "btnContact": "Contact me",
+        "metaData": {
+            "title": "Portfolio | Kevin Julio",
+            "description": "I'm Kevin Julio Pineda (KevinJp), a systems engineer specialized in Full-Stack development. Discover my works and skills in my portfolio."
+        }
     },
     "About": {
         "title": "About Me",

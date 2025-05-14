@@ -15,7 +15,11 @@
         "name": "Hey, Soy Kevin Julio",
         "content": "**Ingeniero de Sistemas enfocado en el Desarrollo Full-Stack**. De Colombia co. Especializado en el desarrollo de aplicaciones web.",
         "btnCV": "Descargar CV",
-        "btnContact": "Contactame"
+        "btnContact": "Contactame",
+        "metaData": {
+            "title": "Portfolio | Kevin Julio",
+            "description": "Soy Kevin Julio Pineda (KevinJp21), ingeniero de sistemas especializado en desarrollo Full-Stack Descubre mis trabajos y habilidades en mi portfolio."
+        }
     },
     "About": {
         "title": "Acerca de mí",
