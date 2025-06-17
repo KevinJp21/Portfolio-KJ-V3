@@ -1,0 +1,103 @@
+import { getPostBySlug } from "@/lib/posts";
+import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+import { Components } from "react-markdown";
+import Layout from "@/components/layout/Layout";
+import LinkDemo from "@/components/blog-slug/linkDemo";
+import LinkGitHub from "@/components/blog-slug/linkGitHub";
+
+// Componentes personalizados para ReactMarkdown
+const components: Components = {
+  h1: ({ children }) => (
+    <h1 className="text-3xl font-bold mb-6 mt-8 text-gray-900 dark:text-white border-b-2 border-blue-500 pb-2">
+      {children}
+    </h1>
+  ),
+  h2: ({ children }) => (
+    <h2 className="text-[var(--Grey-Dark)] text-2xl font-bold mt-12 mb-6">
+      {children}
+    </h2>
+  ),
+  h3: ({ children }) => (
+    <h3 className="text-[var(--Grey-Dark)] text-xl font-semibold mb-6">
+      {children}
+    </h3>
+  ),
+  p: ({ children }) => (
+    <p className="text-[var(--Grey-Dark)] text-base font-normal mb-8">
+      {children}
+    </p>
+  ),
+  ul: ({ children }) => (
+    <ul className="list-disc pl-[3.125rem] pb-4">
+      {children}
+    </ul>
+  ),
+  li: ({ children }) => (
+    <li className="text-[var(--Grey-Dark)] text-base font-normal mb-5">
+      {children}
+    </li>
+  ),
+  a: ({ href, children }) => (
+    <a
+      href={href}
+      className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline transition-colors"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {children}
+    </a>
+  ),
+  code: ({ children }) => (
+    <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-gray-800 dark:text-gray-200">
+      {children}
+    </code>
+  ),
+  pre: ({ children }) => (
+    <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 overflow-x-auto">
+      {children}
+    </pre>
+  ),
+  blockquote: ({ children }) => (
+    <blockquote className="border-l-4 border-blue-500 pl-4 py-2 mb-4 bg-blue-50 dark:bg-blue-900/20 italic text-gray-700 dark:text-gray-300">
+      {children}
+    </blockquote>
+  ),
+  img: ({ src, alt }) => (
+    <picture>
+      <img 
+      src={src} alt={alt} 
+      className="w-full h-auto rounded-3xl"
+      />
+    </picture>
+  ),
+};
+
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ slug: string; locale: string }>;
+}) {
+  const { slug, locale } = await params;
+  const post = getPostBySlug(slug, locale);
+  if (!post) return notFound();
+
+  return (
+    <Layout>
+      <article className="max-w-article-screen-full mt-[6.25rem] min-md:mt-[3.125rem] px-5 mx-auto">
+        <header className="mb-9">
+          <h1 className="text-[var(--Grey-Dark)] text-[min(40px,7vw)] font-semibold">
+            {post.title}
+          </h1>
+          <div className="flex gap-5">
+            {post.github && <LinkGitHub link={post.github} />}
+            {post.demo && (<LinkDemo link={post.demo} />)}
+          </div>
+        </header>
+        <div className="markdown-content">
+          <ReactMarkdown components={components}>{post.content}</ReactMarkdown>
+        </div>
+      </article>
+    </Layout>
+  );
+}

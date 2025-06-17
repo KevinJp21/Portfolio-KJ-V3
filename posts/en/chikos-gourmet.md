@@ -1,17 +1,12 @@
 ---
 title: "Chikos Gourmet - Official Website"
 date: "2024-06-01"
-image: "/projects-images/chikos-gourmet.webp"
+image: "/blog-images/chikos-gourmet.webp"
 languages: ["React", "TypeScript", "Remix", "MySQL"]
-demo: "https://demo-chikosgourmet.com"
-github: "https://github.com/KevinJp21/ChatBot"
+demo: "https://chikos.com.co"
 ---
 
-![Chikos Gourmet Project](/projects-images/chikos-gourmet.webp)
-
-[**Demo**](https://demo-chikosgourmet.com)
-
----
+![Chikos Gourmet Project](/blog-images/chikos-gourmet.webp)
 
 **Chikos Gourmet** is a company dedicated to preparing foods such as pizzas, gourmet dishes, and fast food, with a daily focus on providing the best service to its customers. The restaurant is distinguished by its attention to quality, presentation, and flavor of the products, as well as offering excellent customer service, competitive prices, and efficient home delivery.
 
@@ -34,7 +29,7 @@ CHIKO´S GOURMET will also consolidate itself as a nationally registered franchi
 
 I designed and implemented the official website for Chikos Gourmet, creating an easy-to-use interface that facilitates the display of the menu, locations, and contact with the restaurant. Additionally, I developed an admin dashboard for restaurant staff, ensuring they could autonomously manage the site content.
 
-## Technologies Used
+### Technologies Used
 
 - **Remix Framework:** Framework for both Full-Stack and backend development, offering a fast and efficient experience in creating web applications.
 - **MySQL:** Database management system used to store information about the menu, locations, and other restaurant details.
@@ -44,8 +39,8 @@ I designed and implemented the official website for Chikos Gourmet, creating an 
 
 ## My Skills and Experience
 
-Developing the website for Chikos Gourmet allowed me to consolidate and expand my skills in both Full-Stack and backend development. Using Remix and React, I honed my ability to create interactive and highly efficient interfaces, ensuring a smooth and responsive user experience. The implementation of TypeScript helped improve the robustness of the code, promoting safer and more scalable development.
+Developing the website for **Chikos Gourmet** allowed me to consolidate and expand my skills in both Full-Stack and backend development. Using **Remix** and **React**, I honed my ability to create interactive and highly efficient interfaces, ensuring a smooth and responsive user experience. The implementation of **TypeScript** helped improve the robustness of the code, promoting safer and more scalable development.
 
-The integration with MySQL to manage dynamic content, such as the menu and restaurant images, strengthened my skills in database administration and optimization. Additionally, the use of Cloudflare Images allowed me to optimize the loading and display of images, significantly improving the performance and load speed of the site.
+The integration with **MySQL** to manage dynamic content, such as the menu and restaurant images, strengthened my skills in database administration and optimization. Additionally, the use of **Cloudflare Images** allowed me to optimize the loading and display of images, significantly improving the performance and load speed of the site.
 
 This project highlights my ability to design and develop comprehensive web solutions, combining advanced technology with a focus on process optimization and continuous improvement. The site not only reflects my technical skills but also my approach to delivering efficient, scalable solutions aligned with the client´s business needs.

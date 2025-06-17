@@ -1,7 +1,7 @@
 import { getAllPosts } from '@/lib/posts';
 import Link from 'next/link';
 
-export default async function ProjectIndex({ params }: { params: Promise<{ locale: string }> }) {
+export default async function BlogIndex({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const posts = getAllPosts(locale);
 
@@ -12,7 +12,7 @@ export default async function ProjectIndex({ params }: { params: Promise<{ local
           <img src={post.image} alt={post.title} className="w-full h-64 object-cover" />
           <div className="p-4">
             <h2 className="text-2xl font-bold text-white mb-2">
-              <Link href={`/${locale}/project/${post.slug}`}>{post.title}</Link>
+              <Link href={`/${locale}/blog/${post.slug}`}>{post.title}</Link>
             </h2>
             <div className="flex flex-wrap gap-2 mb-2">
               {post.languages.map((lang: string) => (

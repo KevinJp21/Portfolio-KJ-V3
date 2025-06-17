@@ -1,17 +1,12 @@
 ---
 title: "Chikos Gourmet - Sitio Web Oficial"
 date: "2024-06-01"
-image: "/projects-images/chikos-gourmet.webp"
+image: "/blog-images/chikos-gourmet.webp"
 languages: ["React", "TypeScript", "Remix", "MySQL"]
-demo: "https://demo-chikosgourmet.com"
-github: "https://github.com/KevinJp21/ChatBot"
+demo: "https://chikos.com.co"
 ---
 
-![Proyecto Chikos Gourmet](/projects-images/chikos-gourmet.webp)
-
-[**Demo**](https://demo-chikosgourmet.com)
-
----
+![Proyecto Chikos Gourmet](/blog-images/chikos-gourmet.webp)
 
 **Chikos Gourmet** es una empresa dedicada a la preparación de alimentos como pizzas, platos gourmet y comida rápida, con un enfoque diario en brindar el mejor servicio a sus clientes. El restaurante se distingue por su atención a la calidad, presentación y sabor de los productos, así como por ofrecer un excelente servicio al cliente, precios competitivos y entrega a domicilio eficiente.
 

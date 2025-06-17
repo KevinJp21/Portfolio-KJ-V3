@@ -30,7 +30,7 @@ export default function LanguageSwitch() {
     <div className="relative">
       <button
         title={t("BtnTLanguage")}
-        className="appearance-none text-[var(--Grey)] flex transition-all duration-300 cursor-pointer [&>svg]:w-6 [&>svg]:h-6 [&>svg]:transition-all [&>svg]:duration-300 [&>svg]:hover:[filter:drop-shadow(0_0_10px_var(--Blue))] [&>svg]:hover:scale-110"
+        className="appearance-none text-[var(--Grey)] flex transition-all duration-300 cursor-pointer [&>svg]:max-w-6 [&>svg]:w-full [&>svg]:h-6 [&>svg]:transition-all [&>svg]:duration-300 [&>svg]:hover:[filter:drop-shadow(0_0_10px_var(--Blue))] [&>svg]:hover:scale-110"
         onClick={handleDropdownClick}
       >
         <svg>

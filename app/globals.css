@@ -16,6 +16,7 @@
   --NavBar-Shadow: rgb(214, 214, 214);
   --BG-html: radial-gradient(100% 50% at 50% 0%, rgba(0, 163, 255, 0.13) 0, rgba(0, 163, 255, 0) 50%, rgba(0, 163, 255, 0) 100%);
   --imgBG: linear-gradient(0deg, rgb(199, 199, 199) 0%, rgba(245, 245, 247, 0) 70%);
+  --container-article-screen-full: 1000px;
 }
 
 .dark {
@@ -32,3 +33,4 @@
 body {
   font-family: -apple-system-headline,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif
 }
+
