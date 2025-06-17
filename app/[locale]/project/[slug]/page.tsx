@@ -4,7 +4,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import Link from 'next/link';
 
-export default async function BlogPost({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+export default async function ProjectPost({ params }: { params: Promise<{ slug: string; locale: string }> }) {
   const { slug, locale } = await params;
   const post = getPostBySlug(slug, locale);
   if (!post) return notFound();
