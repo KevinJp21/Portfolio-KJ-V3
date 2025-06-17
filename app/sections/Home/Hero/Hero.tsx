@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Markdown from "react-markdown";
 import Link from "next/link";
-/*En produccion no sale ni la imagen ni el pdf */
+
 export default function Hero() {
     const t = useTranslations();
     return(
