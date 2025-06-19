@@ -6,6 +6,7 @@ import Layout from "@/components/layout/Layout";
 import LinkDemo from "@/components/blog-slug/linkDemo";
 import LinkGitHub from "@/components/blog-slug/linkGitHub";
 import { Metadata } from "next";
+import ToolBadge from "@/components/toolBadge";
 
 // Componentes personalizados para ReactMarkdown
 const components: Components = {
@@ -15,7 +16,7 @@ const components: Components = {
     </h1>
   ),
   h2: ({ children }) => (
-    <h2 className="text-[var(--Grey-Dark)] text-2xl font-bold mt-12 mb-6">
+    <h2 className="text-[var(--Grey-Dark)] text-2xl font-bold  mb-6">
       {children}
     </h2>
   ),
@@ -28,6 +29,11 @@ const components: Components = {
     <p className="text-[var(--Grey-Dark)] text-base font-normal mb-8">
       {children}
     </p>
+  ),
+  strong: ({ children }) => (
+    <strong className="text-[var(--Blue)]">
+      {children}
+    </strong>
   ),
   ul: ({ children }) => (
     <ul className="list-disc pl-[3.125rem] pb-4">
@@ -66,22 +72,22 @@ const components: Components = {
   ),
   img: ({ src, alt }) => (
     <picture>
-      <img 
-        src={src} alt={alt} 
+      <img
+        src={src} alt={alt}
         className="w-full h-auto rounded-3xl"
       />
     </picture>
   ),
 };
 
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: Promise<{ slug: string; locale: string }> 
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
   const { slug, locale } = await params;
   const post = getPostBySlug(slug, locale);
-  
+
   if (!post) {
     return {
       title: 'Entrada no encontrada | Kevin Julio Pineda Portfolio',
@@ -171,6 +177,13 @@ export default async function BlogPost({
             {post.github && <LinkGitHub link={post.github} />}
             {post.demo && (<LinkDemo link={post.demo} />)}
           </div>
+          <ul className="flex flex-wrap gap-[10px] mt-5">
+            {post.languages?.map((lang, index) => (
+              <ToolBadge key={index} icon={<svg className="w-4 h-4">
+                <use href={`/assets/Icons/Icons.svg?${Date.now()}#${lang}`} />
+              </svg>} name={lang} />
+            ))}
+          </ul>
         </header>
         <div className="markdown-content">
           <ReactMarkdown components={components}>{post.content}</ReactMarkdown>

@@ -1,7 +1,8 @@
 import { PostMeta } from "@/lib/posts";
 import Link from "next/link";
+import ToolBadge from "./toolBadge";
 
-export default function PostCard({ post, className = "" }: { post: PostMeta, className?: string }) {
+export default function PostCard({ post, className = "", locale }: { post: PostMeta, className?: string, locale: string }) {
     return (
         <div className={`relative flex flex-col items-center rounded-[20px] shadow-lg cursor-pointer z-[1] overflow-hidden group ${className}`}>
             <img
@@ -20,37 +21,35 @@ export default function PostCard({ post, className = "" }: { post: PostMeta, cla
                             target="_blank"
                             href={post.demo}
                         >
-                            <svg className="fill-[var(--White)] w-5 h-5">
-                                <use href="/assets/Icons/Icons.svg#demo" />
+                            <svg className="fill-[var(--White)] w-5 h-5 hover:fill-[var(--Blue-Hover)] transition-colors duration-300 ease-in-out">
+                                <use href="/assets/Icons/Icons.svg#link" />
                             </svg>
                         </a>
                     )}
                 </div>
                 <div className="flex items-end justify-between p-[10px]">
                     <div className="flex flex-col justify-end flex-wrap">
-                        <Link href={`${post.slug}`} className="underline text-[var(--Blue)] hover:text-[var(--Blue-Hover)]">
+                        <Link href={`/${locale}/blog/${post.slug}`} className="underline text-[var(--Blue)] hover:text-[var(--Blue-Hover)]">
                             <h3 className="text-[var(--White)] text-[min(35px,7vw)] font-semibold">{post.title}</h3>
                         </Link>
                         <ul className="flex flex-wrap gap-[10px]">
                             {post.languages?.map((lang, index) => (
-                                <li key={index} className="text-[var(--White)] text-sm">
-                                    {lang}
-                                </li>
+                                <ToolBadge key={index} icon={<svg className="w-4 h-4">
+                                    <use href={`/assets/Icons/Icons.svg?${Date.now()}#${lang}`} />
+                                </svg>} name={lang} />
                             ))}
                         </ul>
                     </div>
                     {post.github && (
-                        <div className="transition-colors duration-300 ease-in-out hover:fill-[var(--Blue-Hover)]">
                             <a
                                 title='RepositoryGitHub'
                                 target="_blank"
                                 href={post.github}
                             >
-                                <svg className="fill-[var(--White)] w-5 h-5">
+                                <svg className="fill-[var(--White)] w-7 h-7 hover:fill-[var(--Blue-Hover)] transition-colors duration-300 ease-in-out">
                                     <use href="/assets/Icons/Icons.svg#github" />
                                 </svg>
                             </a>
-                        </div>
                     )}
                 </div>
             </div>

@@ -34,11 +34,11 @@ I designed and implemented the official website for Chikos Gourmet, creating an 
 
 ### Technologies Used
 
-- **Remix Framework:** Framework for both Full-Stack and backend development, offering a fast and efficient experience in creating web applications.
-- **MySQL:** Database management system used to store information about the menu, locations, and other restaurant details.
-- **Cloudflare Images:** Platform used to store and serve the menu images, optimizing site load time and performance.
-- **TypeScript:** Programming language complementing JavaScript, used to enhance the robustness and scalability of the project.
-- **React:** JavaScript library used to build a dynamic user interface and ensure reactivity on the website.
+- **Remix Framework**: Framework for both Full-Stack and backend development, offering a fast and efficient experience in creating web applications.
+- **MySQL**: Database management system used to store information about the menu, locations, and other restaurant details.
+- **Cloudflare Images**: Platform used to store and serve the menu images, optimizing site load time and performance.
+- **TypeScript**: Programming language complementing JavaScript, used to enhance the robustness and scalability of the project.
+- **React**: JavaScript library used to build a dynamic user interface and ensure reactivity on the website.
 
 ## My Skills and Experience
 

@@ -27,10 +27,10 @@ export default function NavBar() {
                 <Link href="/">{t("start")}</Link>
               </li>
               <li>
-                <Link href="/projects">{t("projects")}</Link>
+                <Link href="#about-me">{t("about")}</Link>
               </li>
               <li>
-                <Link href="/about">{t("about")}</Link>
+                <Link href="#projects">{t("projects")}</Link>
               </li>
               <li>
                 <Link href="/skills">{t("skills")}</Link>
