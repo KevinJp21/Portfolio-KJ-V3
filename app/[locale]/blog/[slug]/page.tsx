@@ -184,6 +184,15 @@ export default async function BlogPost({
               </svg>} name={lang} />
             ))}
           </ul>
+          <div className="text-end">
+            <span className="text-[var(--Grey-Dark)] text-base font-semibold">
+              {new Date(post.publishedTime).toLocaleDateString(locale as string, {
+                day: '2-digit',
+                month: 'long',
+                year: 'numeric',
+              })}
+            </span>
+          </div>
         </header>
         <div className="markdown-content">
           <ReactMarkdown components={components}>{post.content}</ReactMarkdown>
