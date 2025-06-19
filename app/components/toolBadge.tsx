@@ -18,8 +18,8 @@ const ToolBadge = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
     };
 
     return (
-        <li className={`place-content-center text-center rounded-[10px] h-[26px] ${toolStyles[name] || ''}`}>
-            <span className="text-xs font-semibold flex items-center gap-[2px] h-full px-2 py-1">
+        <li className={`place-content-center text-center rounded-lg h-fit ${toolStyles[name] || ''}`}>
+            <span className="text-xs font-semibold flex items-center gap-0.5 h-full px-2 py-1">
                 {icon && icon}
                 {name}
             </span>
