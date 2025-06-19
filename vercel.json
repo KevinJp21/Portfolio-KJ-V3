@@ -1,5 +1,13 @@
 {
-    "git": {
-      "enabled": false
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "master": false
     }
   }
+}
