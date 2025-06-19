@@ -5,6 +5,7 @@ import { Components } from "react-markdown";
 import Layout from "@/components/layout/Layout";
 import LinkDemo from "@/components/blog-slug/linkDemo";
 import LinkGitHub from "@/components/blog-slug/linkGitHub";
+import { Metadata } from "next";
 
 // Componentes personalizados para ReactMarkdown
 const components: Components = {
@@ -66,12 +67,91 @@ const components: Components = {
   img: ({ src, alt }) => (
     <picture>
       <img 
-      src={src} alt={alt} 
-      className="w-full h-auto rounded-3xl"
+        src={src} alt={alt} 
+        className="w-full h-auto rounded-3xl"
       />
     </picture>
   ),
 };
+
+// Función para generar metadatos dinámicos
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ slug: string; locale: string }> 
+}): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const post = getPostBySlug(slug, locale);
+  
+  if (!post) {
+    return {
+      title: 'Entrada no encontrada | Kevin Julio Pineda Portfolio',
+      description: 'La entrada del blog que buscas no existe.',
+    };
+  }
+
+  // Extraer las primeras 160 caracteres del contenido para la descripción
+  const description = post.description;
+
+  return {
+    title: `${post.title} | Kevin Julio Pineda Portfolio`,
+    description,
+    keywords: post.keywords,
+    authors: [{ name: 'Kevin Julio Pineda' }],
+    creator: 'Kevin Julio Pineda',
+    publisher: 'Kevin Julio Pineda',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL('https://kevinjp.dev'), // Reemplaza con tu dominio
+    alternates: {
+      canonical: `/blog/${slug}`,
+      languages: {
+        'es': `/es/blog/${slug}`,
+        'en': `/en/blog/${slug}`,
+      },
+    },
+    openGraph: {
+      title: post.title,
+      description,
+      url: `/blog/${slug}`,
+      siteName: 'Kevin Julio Pineda Portfolio',
+      images: [
+        {
+          url: post.image || '/assets/Images/KevinJP.avif', // Imagen por defecto
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      locale: locale,
+      type: 'article',
+      publishedTime: post.publishedTime,
+      modifiedTime: post.modifiedTime,
+      authors: ['Kevin Julio Pineda'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description,
+      images: [post.image || '/assets/Images/KevinJP.avif'],
+      creator: '@kevinjp', // Reemplaza con tu handle de Twitter
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
 
 export default async function BlogPost({
   params,

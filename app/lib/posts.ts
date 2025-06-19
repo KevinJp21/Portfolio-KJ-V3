@@ -7,11 +7,14 @@ const postsDirectory = path.join(process.cwd(), 'posts');
 export interface PostMeta {
   slug: string;
   title: string;
-  date: string;
+  publishedTime: string;
+  modifiedTime: string;
   image: string;
   languages: string[];
   demo?: string;
   github?: string;
+  description: string;
+  keywords: string;
 }
 
 export interface Post extends PostMeta {
@@ -35,11 +38,14 @@ export function getAllPosts(locale: string = 'es'): PostMeta[] {
     return {
       slug,
       title: data.title,
-      date: data.date,
+      publishedTime: data.publishedTime,
+      modifiedTime: data.modifiedTime,
       image: data.image,
       languages: data.languages,
       demo: data.demo,
       github: data.github,
+      description: data.description,
+      keywords: data.keywords,
     };
   });
 }
@@ -58,11 +64,14 @@ export function getPostBySlug(slug: string, locale: string = 'es'): Post | null 
   return {
     slug,
     title: data.title,
-    date: data.date,
+    publishedTime: data.publishedTime,
+    modifiedTime: data.modifiedTime,
     image: data.image,
     languages: data.languages,
     demo: data.demo,
     github: data.github,
+    description: data.description,
+    keywords: data.keywords,
     content,
   };
 }

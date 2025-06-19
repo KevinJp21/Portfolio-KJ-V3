@@ -1,9 +1,12 @@
 ---
 title: "Chikos Gourmet - Official Website"
-date: "2024-06-01"
+publishedTime: "2024-10-28"
+modifiedTime: "2024-10-28"
 image: "/blog-images/chikos-gourmet.webp"
 languages: ["React", "TypeScript", "Remix", "MySQL"]
 demo: "https://chikos.com.co"
+description: "Chikos Gourmet is a company specializing in pizzas, gourmet dishes, and fast food, known for its quality, flavor, and customer service. It offers competitive prices, excellent presentation, and efficient home delivery. Developed by Kevin Julio Pineda."
+keywords: "Chikos Gourmet, official website Chikos Gourmet, gourmet restaurant Barranquilla, pizza restaurant Barranquilla, fast food delivery, interactive menu, restaurant admin panel, web design restaurant, responsive design, food franchise Colombia, Kevin Julio Pineda, web developer, Remix Framework, React, TypeScript, MySQL, Cloudflare Images, full-stack development, user experience optimization, performance optimization"
 ---
 
 ![Chikos Gourmet Project](/blog-images/chikos-gourmet.webp)

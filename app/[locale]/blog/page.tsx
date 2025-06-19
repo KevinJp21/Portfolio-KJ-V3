@@ -19,7 +19,7 @@ export default async function BlogIndex({ params }: { params: Promise<{ locale: 
                 <span key={lang} className="bg-blue-700 text-white px-2 py-1 rounded text-xs">{lang}</span>
               ))}
             </div>
-            <p className="text-gray-300">{post.date}</p>
+            <p className="text-gray-300">{post.publishedTime}</p>
           </div>
         </div>
       ))}
