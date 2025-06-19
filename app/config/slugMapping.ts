@@ -12,7 +12,7 @@ export const slugMapping = {
 
 export function getSlugForLocale(slug: string, locale: string): string {
     // Buscar la clave que corresponde a este slug
-    for (const [key, mapping] of Object.entries(slugMapping)) {
+    for (const [, mapping] of Object.entries(slugMapping)) {
         if (mapping.en === slug || mapping.es === slug) {
             return mapping[locale as 'en' | 'es'] || slug;
         }
