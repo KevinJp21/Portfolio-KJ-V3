@@ -11,15 +11,15 @@ const components: Components = {
 }
 
 export default function About() {
-  const t = useTranslations();
+  const t = useTranslations('About');
   return (
     <section className="container-home-section">
       <h2 className="home-title">
-        {t("About.title")}
+        {t("title")}
       </h2>
       <div className="max-w-[50rem] w-full">
         <ReactMarkdown components={components}>
-          {t("About.content")}
+          {t("content")}
         </ReactMarkdown>
       </div>
     </section>

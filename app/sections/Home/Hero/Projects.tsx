@@ -1,14 +1,23 @@
 import PostCard from "@/components/postCard";
 import { getAllPosts } from "@/lib/posts";
+import { useTranslations } from "next-intl";
 
+// Componente cliente para las traducciones
+
+function ProjectTitle() {
+    const t = useTranslations('Projects');
+    return <h2 className="home-title">{t('title')}</h2>;
+}
+
+// Componente servidor para los posts
 export default async function Projects({ params }: { params: { locale: string } }) {
     const { locale } = params;
     const posts = getAllPosts(locale);
-    
+
     return (
         <section className="flex flex-col items-center justify-center min-h-fit py-8 px-5 max-w-[1440px] w-full mx-auto">
-
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(20%,1fr))] auto-rows-[minmax(240px,auto)] gap-4 w-full py-5">
+            <ProjectTitle />
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(20%,1fr))] auto-rows-[minmax(240px,auto)] gap-2.5 w-full py-5">
                 {posts.map((post, index) => {
                     // Definir clases específicas para cada card basado en el índice
                     const cardClasses = {
