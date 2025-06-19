@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import About from "@/sections/Home/Hero/About";
 import Hero from "@/sections/Home/Hero/Hero";
+import Projects from "@/sections/Home/Hero/Projects";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
 
@@ -39,11 +40,14 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
   }
 }
   
-export default async function Home() {
+export default async function Home({params}: {params: Promise<{locale: string}>}) {
+  const { locale } = await params;
+  
   return (
     <Layout>
       <Hero />
       <About />
+      <Projects params={{locale}} />
     </Layout>
   );
 }

@@ -38,4 +38,8 @@ body {
   .container-home-section {
     @apply flex flex-col items-center justify-center py-8 px-5 max-w-[1440px] w-full mx-auto;
   }
+  
+  .home-title {
+    @apply text-[var(--Grey-Dark)] text-[2.5rem] font-bold p-5 text-center text-balance;
+  }
 }
