@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
+import { getSlugForLocale } from '@/config/slugMapping';
 
 export default function LanguageSwitch() {
   const t = useTranslations("Header");
@@ -9,16 +10,27 @@ export default function LanguageSwitch() {
   const pathname = usePathname();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-
   const handleDropdownClick = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const handleOptionClick = (option: string) => {
-    setDropdownOpen(false);
-    const segments = pathname.split("/");
-    segments[1] = option; 
-    router.push(segments.join("/") || "/");
+  const handleLanguageChange = (newLocale: string) => {
+    // Extraer las partes de la URL
+    const pathParts = pathname.split('/').filter(Boolean);
+    
+    // Detectar si estamos en una página de blog con slug
+    if (pathParts.length >= 3 && pathParts[1] === 'blog' && pathParts[2]) {
+      const currentSlug = pathParts[2];
+      // Obtener el slug correspondiente en el nuevo idioma
+      const newSlug = getSlugForLocale(currentSlug, newLocale);
+      // Construir la nueva URL para blog
+      const newPath = `/${newLocale}/blog/${newSlug}`;
+      router.push(newPath);
+    } else {
+      // Para cualquier otra página, solo cambiar el idioma
+      const newPath = `/${newLocale}${pathname.substring(3)}`; // Remover el locale actual
+      router.push(newPath);
+    }
   };
 
   const optionsTheme = [
@@ -43,7 +55,7 @@ export default function LanguageSwitch() {
             <li
               key={option.value}
               className="p-2.5 rounded-[10px] cursor-pointer hover:bg-[#0003]"
-              onClick={() => handleOptionClick(option.value)}
+              onClick={() => handleLanguageChange(option.value)}
             >
               <span className="text-sm font-semibold text-[var(--Grey)]">
                 {option.label}

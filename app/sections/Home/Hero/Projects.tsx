@@ -1,23 +1,21 @@
 import PostCard from "@/components/postCard";
 import { getAllPosts } from "@/lib/posts";
 import { useTranslations } from "next-intl";
+import { slugMapping } from '@/config/slugMapping';
 
-// Componente cliente para las traducciones
 
 function ProjectTitle() {
     const t = useTranslations('Projects');
     return <h2 className="home-title">{t('title')}</h2>;
 }
-
-// Componente servidor para los posts
 export default async function Projects({ params }: { params: { locale: string } }) {
     const { locale } = params;
     const posts = getAllPosts(locale);
 
-    // Definir el orden específico que quieres
+    // Definir el orden específico usando las claves del mapeo
     const desiredOrder = [
         "chikos-gourmet",
-        "verezza-e-commerce", 
+        "verezza-e-commerce",
         "2", 
         "3", 
         "4", 
@@ -26,11 +24,14 @@ export default async function Projects({ params }: { params: { locale: string } 
 
     // Ordenar los posts según el orden deseado
     const sortedPosts = desiredOrder
-        .map(slug => posts.find(post => post.slug === slug))
+        .map(key => {
+            const mappedSlug = slugMapping[key as keyof typeof slugMapping]?.[locale as 'en' | 'es'] || key;
+            return posts.find(post => post.slug === mappedSlug);
+        })
         .filter((post): post is NonNullable<typeof post> => post !== undefined);
 
     return (
-        <section id="projects" className="flex flex-col items-center justify-center min-h-fit py-8 px-5 max-w-[1440px] w-full mx-auto">
+        <section className="flex flex-col items-center justify-center min-h-fit py-8 px-5 max-w-[1440px] w-full mx-auto">
             <ProjectTitle />
             <div className="grid grid-cols-[repeat(auto-fit,minmax(20%,1fr))] auto-rows-[minmax(240px,auto)] gap-2.5 w-full py-5">
                 {sortedPosts.map((post) => {

@@ -1,7 +1,7 @@
 ---
 title: "Verezza E-commerce"
-publishedTime: "2024-10-28"
-modifiedTime: "2024-10-28"
+publishedTime: "2024-11-15"
+modifiedTime: "2024-11-15"
 image: "https://c98agni2tvccp34z.public.blob.vercel-storage.com/verezza-hRFo1mfQtbUDRe7YZYBtRbvCb7JsCK.webp"
 languages: ["React", "TypeScript", "Remix", "GraphQL", "Shopify"]
 demo: "https://verezza.vercel.app/"
@@ -29,7 +29,7 @@ The goal was to build a fast, accessible, and scalable e-commerce site aligned w
 - Designed and developed the **entire frontend** of the e-commerce site using **Remix** and **React**.  
 - Implemented authentication, navigation, product filters, shopping cart, and checkout flow.  
 - Connected to **Shopify** using its **Storefront API** via GraphQL to fetch products, collections, and variants.  
-- Applied a responsive design with **Tailwind CSS**, optimized for both mobile and desktop.  
+- Applied a responsive design, optimized for both mobile and desktop.  
 - Optimized web performance using SSR strategies, lazy loading, and cache control.  
 - Added client and server-side logic in Remix with solid state and error handling.  
 
