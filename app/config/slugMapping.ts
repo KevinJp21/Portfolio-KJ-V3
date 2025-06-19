@@ -5,7 +5,7 @@ export const slugMapping = {
     },
     "verezza-e-commerce": {
         en: "verezza-e-commerce",
-        es: "verezza-e-tienda"
+        es: "verezza-e-commerce"
     },
     // ... más mapeos
 };
