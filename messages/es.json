@@ -33,5 +33,12 @@
         "SubTitle1": "Lenguajes y Herramientas",
         "SubTitle2": "Inteligencia Artificial",
         "SubTitle3": "Otros"
+    },
+    "Blog": {
+        "sortBy": "Ordenar por",
+        "newest": "Más recientes",
+        "oldest": "Más antiguos",
+        "filterBy": "Filtrar por",
+        "allTechnologies": "Todas las tecnologías"
     }
 }

@@ -35,7 +35,7 @@ body {
 }
 
 @layer components {
-  .container-home-section {
+  .container-section {
     @apply flex flex-col items-center justify-center py-8 px-5 max-w-[1440px] w-full mx-auto;
   }
   

@@ -33,5 +33,12 @@
         "SubTitle1": "Languages and Tools",
         "SubTitle2": "Artificial Intelligence",
         "SubTitle3": "Others"
+    },
+    "Blog": {
+        "sortBy": "Sort by",
+        "newest": "Newest",
+        "oldest": "Oldest",
+        "filterBy": "Filter by",
+        "allTechnologies": "All technologies"
     }
 }

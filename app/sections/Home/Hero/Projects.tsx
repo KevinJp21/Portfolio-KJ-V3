@@ -31,7 +31,7 @@ export default async function Projects({ params }: { params: { locale: string } 
         .filter((post): post is NonNullable<typeof post> => post !== undefined);
 
     return (
-        <section className="flex flex-col items-center justify-center min-h-fit py-8 px-5 max-w-[1440px] w-full mx-auto">
+        <section className="container-section">
             <ProjectTitle />
             <div className="grid grid-cols-[repeat(auto-fit,minmax(20%,1fr))] auto-rows-[minmax(240px,auto)] gap-2.5 w-full py-5">
                 {sortedPosts.map((post) => {

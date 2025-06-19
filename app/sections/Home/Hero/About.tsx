@@ -13,7 +13,7 @@ const components: Components = {
 export default function About() {
   const t = useTranslations('About');
   return (
-    <section className="container-home-section">
+    <section className="container-section">
       <h2 className="home-title">
         {t("title")}
       </h2>
