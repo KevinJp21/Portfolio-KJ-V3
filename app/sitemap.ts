@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const postsEs = getAllPosts('es');
     postUrlsEs = postsEs.map((post) => ({
       url: `${baseUrl}/es/blog/${post.slug}`,
-      lastModified: new Date(post.publishedTime),
+      lastModified: new Date(post.modifiedTime),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     }));
@@ -58,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const postsEn = getAllPosts('en');
     postUrlsEn = postsEn.map((post) => ({
       url: `${baseUrl}/en/blog/${post.slug}`,
-      lastModified: new Date(post.publishedTime),
+      lastModified: new Date(post.modifiedTime),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     }));
