@@ -17,12 +17,12 @@ export default function Hero() {
         <section className="min-h-[37.5rem] flex items-center justify-center py-8 px-5 mx-auto  mt-[6.25rem] min-md:mt-0 max-w-[90rem] w-full">
             <div className="w-full h-full flex justify-center items-center lg:gap-10 flex-wrap">
                 <div className="relative flex justify-center items-center h-[25rem] w-[25rem] [background:var(--imgBG)] [clip-path:circle()]">
-                  <img src="/assets/Images/KevinJP.avif" alt="Kevin Jp" className="w-full h-full object-contain " />
+                  <img src="https://c98agni2tvccp34z.public.blob.vercel-storage.com/KevinJP-5hmwapH3CNtol4B4NGZKO6cZY7Ruvq.avif" alt="Kevin Julio Pineda" className="w-full h-full object-contain " />
                 </div>
                 <div className="max-w-[35rem] w-full">
-                    <h2 className="text-[min(3.125rem,9vw)] md:text-5xl  text-[var(--Grey-Dark)] text-center font-semibold p-1 leading-15 text-balance">
+                    <h1 className="text-[min(3.125rem,9vw)] md:text-5xl  text-[var(--Grey-Dark)] text-center font-semibold p-1 leading-15 text-balance">
                         {t("Home.name")}
-                    </h2>
+                    </h1>
                     <ReactMarkdown components={components}>
                         {t("Home.content")}
                     </ReactMarkdown>

@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import About from "@/sections/Home/Hero/About";
 import Hero from "@/sections/Home/Hero/Hero";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -42,6 +43,7 @@ export default async function Home() {
   return (
     <Layout>
       <Hero />
+      <About />
     </Layout>
   );
 }

@@ -74,7 +74,6 @@ const components: Components = {
   ),
 };
 
-// Función para generar metadatos dinámicos
 export async function generateMetadata({ 
   params 
 }: { 
@@ -90,7 +89,6 @@ export async function generateMetadata({
     };
   }
 
-  // Extraer las primeras 160 caracteres del contenido para la descripción
   const description = post.description;
 
   return {
@@ -105,7 +103,7 @@ export async function generateMetadata({
       address: false,
       telephone: false,
     },
-    metadataBase: new URL('https://kevinjp.dev'), // Reemplaza con tu dominio
+    metadataBase: new URL('https://kevinjp.dev'),
     alternates: {
       canonical: `/blog/${slug}`,
       languages: {
@@ -120,7 +118,7 @@ export async function generateMetadata({
       siteName: 'Kevin Julio Pineda Portfolio',
       images: [
         {
-          url: post.image || '/assets/Images/KevinJP.avif', // Imagen por defecto
+          url: post.image || 'https://c98agni2tvccp34z.public.blob.vercel-storage.com/KevinJP-5hmwapH3CNtol4B4NGZKO6cZY7Ruvq.avif', // Imagen por defecto
           width: 1200,
           height: 630,
           alt: post.title,
@@ -136,8 +134,8 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: post.title,
       description,
-      images: [post.image || '/assets/Images/KevinJP.avif'],
-      creator: '@kevinjp', // Reemplaza con tu handle de Twitter
+      images: [post.image || 'https://c98agni2tvccp34z.public.blob.vercel-storage.com/KevinJP-5hmwapH3CNtol4B4NGZKO6cZY7Ruvq.avif'],
+      creator: '@kevinjpdev',
     },
     robots: {
       index: true,

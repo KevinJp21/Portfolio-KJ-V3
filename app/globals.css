@@ -9,7 +9,7 @@
   --Grey-Dark: rgba(0, 0, 0, .8);
   --White: rgba(255, 255, 255, .8);
   --BGWhite: rgba(245, 245, 247, .8);
-  --Blue: rgba(0, 122, 255, .8);
+  --Blue: rgb(0, 123, 255);
   --Blue-Hover: rgba(0, 122, 255, .7);
   --BG-html: #fff;
   --NavBar-bg: rgba(245, 245, 247, .5);
@@ -34,3 +34,8 @@ body {
   font-family: -apple-system-headline,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif
 }
 
+@layer components {
+  .container-home-section {
+    @apply flex flex-col items-center justify-center py-8 px-5 max-w-[1440px] w-full mx-auto;
+  }
+}
