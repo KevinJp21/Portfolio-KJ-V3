@@ -177,7 +177,7 @@ export default async function BlogPost({
             {post.github && <LinkGitHub link={post.github} />}
             {post.demo && (<LinkDemo link={post.demo} />)}
           </div>
-          <ul className="flex flex-wrap gap-[10px] mt-5">
+          <ul className="flex flex-wrap gap-[10px] mt-5 mb-4">
             {post.languages?.map((lang, index) => (
               <ToolBadge key={index} icon={<svg className="w-4 h-4">
                 <use href={`/assets/Icons/Icons.svg?${Date.now()}#${lang}`} />

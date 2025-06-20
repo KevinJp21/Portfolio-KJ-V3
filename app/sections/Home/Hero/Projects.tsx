@@ -2,11 +2,49 @@ import PostCard from "@/components/postCard";
 import { getAllPosts } from "@/lib/posts";
 import { useTranslations } from "next-intl";
 import { slugMapping } from '@/config/slugMapping';
+import Link from "next/link";
+import { useLocale } from "next-intl";
 
 
 function ProjectTitle() {
     const t = useTranslations('Projects');
     return <h2 className="home-title">{t('title')}</h2>;
+}
+
+function ViewAllProjects() {
+    const locale = useLocale();
+    const t = useTranslations('Projects');
+    return (
+        <div className="flex items-center justify-center ">
+            <div className="relative group">
+                <Link
+                    className="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-lg cursor-pointer rounded-2xl shadow-blue-500/30 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-blue-500/40"
+                    href={`/${locale}/blog`}
+                >
+                    <span
+                        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-950 to-blue-400 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    ></span>
+                    <span className="relative z-10 block px-6 py-2 rounded-2xl bg-neutral-950">
+                        <div className="relative z-10 flex items-center space-x-3">
+                            <span
+                                className="text-sm transition-all duration-500 group-hover:translate-x-1.5 "
+                            >{t('viewAll')}</span>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="w-7 h-7 transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-blue-400"
+                            >
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </span>
+                </Link>
+            </div>
+        </div>
+    );
 }
 export default async function Projects({ params }: { params: { locale: string } }) {
     const { locale } = params;
@@ -16,9 +54,9 @@ export default async function Projects({ params }: { params: { locale: string } 
     const desiredOrder = [
         "chikos-gourmet",
         "verezza-e-commerce",
-        "2", 
-        "3", 
-        "4", 
+        "2",
+        "3",
+        "4",
         "5"
     ];
 
@@ -47,11 +85,12 @@ export default async function Projects({ params }: { params: { locale: string } 
 
                     return (
                         <div key={post.slug} className={cardClasses}>
-                            <PostCard post={post} className="h-full" locale={locale}/>
+                            <PostCard post={post} className="h-full" locale={locale} />
                         </div>
                     );
                 })}
             </div>
+            <ViewAllProjects />
         </section>
     );
 }
