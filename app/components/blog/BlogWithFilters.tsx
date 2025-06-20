@@ -46,7 +46,7 @@ export default function BlogWithFilters({ posts, locale }: BlogWithFiltersProps)
   }, [posts, filters]);
 
   return (
-    <div className="max-w-[1440px] mx-auto flex mt-[6.25rem] min-md:mt-0 w-full flex-col md:flex-row gap-4 h-full py-8 px-5">
+    <div className="max-w-[1440px] mx-auto flex mt-[6.25rem] min-md:mt-0 w-full flex-col min-[50rem]:flex-row gap-4 h-full py-8 px-5">
       <BlogFilters 
         technologies={allTechnologies}
         onFilterChange={setFilters}
@@ -59,7 +59,7 @@ export default function BlogWithFilters({ posts, locale }: BlogWithFiltersProps)
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 auto-rows-[200px] md:grid-cols-2 gap-8 [&>_div]:row-span-2 [&>_div]:col-span-1">
+        <div className="grid grid-cols-1 auto-rows-[200px] min-[50rem]:grid-cols-2 gap-8 [&>_div]:row-span-2 [&>_div]:col-span-1">
           {filteredPosts.map((post) => (
             <PostCard key={post.slug} post={post} locale={locale} />
           ))}
