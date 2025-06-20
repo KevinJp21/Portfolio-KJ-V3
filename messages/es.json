@@ -39,6 +39,9 @@
         "newest": "Más recientes",
         "oldest": "Más antiguos",
         "filterBy": "Filtrar por",
-        "allTechnologies": "Todas las tecnologías"
+        "allTechnologies": "Todas las tecnologías",
+        "filterByTech": "Tipo de producto",
+        "selected": "Seleccionado(s)",
+        "clearAll": "Eliminar todos"
     }
 }
