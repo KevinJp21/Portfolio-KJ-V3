@@ -74,7 +74,7 @@ const components: Components = {
     <picture>
       <img
         src={src} alt={alt}
-        className="w-full h-auto rounded-3xl"
+        className="w-fit max-h-[500px] h-full rounded-3xl mx-auto"
       />
     </picture>
   ),

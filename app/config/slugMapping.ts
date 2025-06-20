@@ -7,6 +7,10 @@ export const slugMapping = {
         en: "verezza-e-commerce",
         es: "verezza-e-commerce"
     },
+    "docme-assistant-chatbot": {
+        en: "docme-assistant-chatbot",
+        es: "asistente-docme-chatbot"
+    },
     // ... más mapeos
 };
 
