@@ -18,7 +18,8 @@
         "btnContact": "Contactame",
         "metaData": {
             "title": "Kevin Julio Pineda | Portfolio",
-            "description": "Soy Kevin Julio Pineda (KevinJp21), ingeniero de sistemas especializado en desarrollo Full-Stack Descubre mis trabajos y habilidades en mi portfolio."
+            "description": "Soy Kevin Julio Pineda (KevinJp), ingeniero de sistemas especializado en desarrollo Full-Stack. Descubre mis proyectos, habilidades y experiencia profesional en este portafolio.",
+            "keywords": "Kevin Julio Pineda, KevinJp, portafolio, desarrollo Full-Stack, ingeniero de sistemas, desarrollador web, aplicaciones web, frontend, backend, Colombia, React, TypeScript, JavaScript, Remix, NextJS, Angular, TailwindCSS, GraphQL, Shopify, MySQL, Java, Python, PHP, ExpressJS, Flask, SQLAlchemy, inteligencia artificial, TensorFlow, Keras, NLTK, ScikitLearn, Pandas, NumPy, Git, npm, pnpm, desarrollo de software, soluciones tecnológicas, programación web"
         }
     },
     "About": {
@@ -36,6 +37,11 @@
         "SubTitle3": "Otros"
     },
     "Blog": {
+        "metaData": {
+            "title": "Blog - Kevin Julio Pineda | Portfolio",
+            "description": "Descubre mis proyectos de desarrollo web y artículos sobre programación, machine learning y tendencias tecnológicas.",
+            "keywords": "blog, portafolio, proyectos, desarrollo web, programación, machine learning, tecnología, full-stack"
+        },
         "sortBy": "Ordenar por",
         "newest": "Más recientes",
         "oldest": "Más antiguos",

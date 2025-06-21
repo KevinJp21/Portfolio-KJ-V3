@@ -121,7 +121,7 @@ export async function generateMetadata({
     openGraph: {
       title: post.title,
       description,
-      url: `/blog/${slug}`,
+      url: `${locale}/blog/${slug}`,
       siteName: 'Kevin Julio Pineda Portfolio',
       images: [
         {

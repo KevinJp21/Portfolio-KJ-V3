@@ -6,7 +6,7 @@ image: "https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda
 languages: ["Shopify", "JavaScript"]
 demo: "https://ferreteriarueda.com/"
 description: "Primer canal de ventas online para Ferretería Rueda, desarrollado desde cero con Liquid y JavaScript. Proyecto realizado por Kevin Julio Pineda."
-keywords: "shopify liquid desarrollo, ecommerce ferretería, tienda online personalizada, desarrollo tienda shopify, javascript frontend, ferretería rueda tienda, desarrollo e-commerce Colombia, desarrollador Shopify Liquid"
+keywords: "shopify liquid desarrollo, ecommerce ferretería, tienda online personalizada, desarrollo tienda shopify, javascript frontend, ferretería rueda tienda, desarrollo e-commerce Colombia, desarrollador Shopify Liquid, Kevin Julio Pineda, desarrollador web,"
 ---
 
 ![Ferretería Rueda - Tienda Online](https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda-4SL4sGq58fvYkcTFM35hFtV2eEWT91.webp)
