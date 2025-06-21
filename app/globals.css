@@ -42,4 +42,12 @@ body {
   .home-title {
     @apply text-[var(--Grey-Dark)] text-[2.5rem] font-bold p-5 text-center text-balance;
   }
+  .ContentSkills{
+    @apply grid grid-cols-[repeat(auto-fill,150px)] auto-rows-[100px] place-content-center gap-5 w-full p-5;
+  }
+}
+
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 100vh; /* espacio reservado para evitar layout shift */
 }

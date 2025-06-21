@@ -1,7 +1,8 @@
 import Layout from "@/app/components/layout/Layout";
-import About from "@/app/sections/Home/Hero/About";
-import Hero from "@/app/sections/Home/Hero/Hero";
-import Projects from "@/app/sections/Home/Hero/Projects";
+import About from "@/app/sections/Home/About";
+import Hero from "@/app/sections/Home/Hero";
+import Projects from "@/app/sections/Home/Projects";
+import Skills from "@/app/sections/Home/Skills";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
 
@@ -48,6 +49,7 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
       <Hero />
       <About />
       <Projects params={{locale}} />
+      <Skills />
     </Layout>
   );
 }

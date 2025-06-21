@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import ReactMarkdown from "react-markdown";
 import { Components } from "react-markdown";
 import Link from "next/link";
+import { Icon } from "@/app/components/Icon";
 
 const components: Components = {
     p: ({ children }) => (
@@ -36,14 +37,10 @@ export default function Hero() {
                     </div>
                     <div className="mt-5 flex justify-center items-center gap-1 list-none [&>*]:p-1.5 [&>*_svg]:w-10 [&>*_svg]:h-10 [&>*_svg]:fill-[var(--Grey-Dark)] [&>*_svg]:transition-all [&>*_svg]:duration-300 [&>*_svg]:ease-out [&>*_svg]:hover:scale-125">
                         <Link href="https://www.linkedin.com/in/kevin-julio-667280240/" target="_blank" title="LinkedIn">
-                            <svg>
-                                <use href="assets/Icons/Icons.svg#linkedin" />
-                            </svg>
+                            <Icon name="linkedin" />
                         </Link>
                         <Link href="https://github.com/KevinJp21" target="_blank" title="GitHub">
-                            <svg>
-                                <use href="assets/Icons/Icons.svg#github" />
-                            </svg>
+                            <Icon name="github" />
                         </Link>
                     </div>
                 </div>

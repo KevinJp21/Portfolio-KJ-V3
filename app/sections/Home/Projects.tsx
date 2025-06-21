@@ -71,7 +71,7 @@ export default async function Projects({ params }: { params: { locale: string } 
         .filter((item): item is NonNullable<typeof item> => item !== null);
 
     return (
-        <section className="container-section">
+        <section className="container-section lazy-section">
             <ProjectTitle />
             <div className="grid grid-cols-[repeat(auto-fit,minmax(20%,1fr))] auto-rows-[minmax(240px,auto)] gap-2.5 w-full py-5">
                 {sortedPosts.map(({ post, mappingKey }) => {

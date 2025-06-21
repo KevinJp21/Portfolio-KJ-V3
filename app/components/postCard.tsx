@@ -22,9 +22,7 @@ export default function PostCard({ post, className = "", locale }: { post: PostM
                             target="_blank"
                             href={post.demo}
                         >
-                            <svg className="fill-[var(--White)] w-5 h-5 hover:fill-[var(--Blue-Hover)] transition-colors duration-300 ease-in-out">
-                                <use href="/assets/Icons/Icons.svg#link" />
-                            </svg>
+                            <Icon name="link" className="fill-[var(--White)] w-5 h-5 hover:fill-[var(--Blue-Hover)] transition-colors duration-300 ease-in-out" />
                         </a>
                     )}
                 </div>
@@ -45,9 +43,7 @@ export default function PostCard({ post, className = "", locale }: { post: PostM
                                 target="_blank"
                                 href={post.github}
                             >
-                                <svg className="fill-[var(--White)] w-7 h-7 hover:fill-[var(--Blue-Hover)] transition-colors duration-300 ease-in-out">
-                                    <use href="/assets/Icons/Icons.svg#github" />
-                                </svg>
+                                <Icon name="github" className="fill-[var(--White)] w-7 h-7 hover:fill-[var(--Blue-Hover)] transition-colors duration-300 ease-in-out"/>
                             </a>
                     )}
                 </div>

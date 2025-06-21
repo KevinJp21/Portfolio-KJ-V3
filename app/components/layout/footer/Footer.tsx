@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Icon } from "../../Icon";
 
 export default function Footer() {
     return (
@@ -10,23 +11,17 @@ export default function Footer() {
                 <ul className="flex justify-center items-center gap-1.5 list-none [&>*]:p-1.5 [&>*_svg]:w-6 [&>*_svg]:h-6 [&>*_svg]:fill-[var(--Grey-Dark)] [&>*_svg]:transition-all [&>*_svg]:duration-300 [&>*_svg]:ease-out [&>*_svg]:hover:scale-125">
                     <li>
                         <Link href="https://github.com/KevinJp21" target="_blank">
-                            <svg>
-                                <use href="/assets/Icons/Icons.svg#github"></use>
-                            </svg>
+                            <Icon name="github" />
                         </Link>
                     </li>
                     <li>
                     <Link href="https://www.linkedin.com/in/kevin-julio-667280240/" target="_blank">
-                            <svg>
-                                <use href="/assets/Icons/Icons.svg#linkedin"></use>
-                            </svg>
+                            <Icon name="linkedin" />
                         </Link>
                     </li>
                     <li>
                     <Link href="mailto: kevinjp821@gmail.com" target="_blank">
-                            <svg>
-                                <use href="/assets/Icons/Icons.svg#contact"></use>
-                            </svg>
+                            <Icon name="contact" />
                         </Link>
                     </li>
                 </ul>
