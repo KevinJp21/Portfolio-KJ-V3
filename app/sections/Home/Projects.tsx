@@ -54,11 +54,11 @@ export default async function Projects({ params }: { params: { locale: string } 
     // Definir el orden específico usando las claves del mapeo
     const desiredOrder = [
         "chikos-gourmet",
-        "verezza-e-commerce",
+        "ferreteria-rueda",
         "2",
         "3",
         "docme-assistant-chatbot",
-        "5"
+        "verezza-e-commerce"
     ];
 
     // Ordenar los posts según el orden deseado
@@ -78,11 +78,11 @@ export default async function Projects({ params }: { params: { locale: string } 
                     // Definir clases específicas para cada card basado en la clave del mapeo
                     const cardClasses = {
                         "chikos-gourmet": "col-span-4 row-span-1 min-[39.063rem]:col-span-2 min-[39.063rem]:row-span-2", // Primer proyecto (grande)
-                        "verezza-e-commerce": "col-span-4 row-span-1 min-[39.063rem]:col-span-2 min-[39.063rem]:row-span-2", // Segundo proyecto
+                        "ferreteria-rueda": "col-span-4 row-span-1 min-[39.063rem]:col-span-2 min-[39.063rem]:row-span-2", // Segundo proyecto
                         "2": "col-span-4 row-span-1 min-[39.063rem]:col-start-1 min-[39.063rem]:col-span-2 min-[39.063rem]:row-span-1", // Tercer proyecto
                         "3": "col-span-4 row-span-1 min-[39.063rem]:col-start-3 min-[39.063rem]:col-span-2 min-[39.063rem]:row-span-1", // Cuarto proyecto
                         "docme-assistant-chatbot": "col-span-4 row-span-1 min-[39.063rem]:col-span-2 min-[39.063rem]:row-span-2 min-[57.75rem]:col-span-1 min-[57.75rem]:row-span-2", // Quinto proyecto
-                        "5": "col-span-4 row-span-1 min-[39.063rem]:col-span-2 min-[39.063rem]:row-span-2 min-[57.75rem]:col-span-3 min-[57.75rem]:row-span-2", // Sexto proyecto
+                        "verezza-e-commerce": "col-span-4 row-span-1 min-[39.063rem]:col-span-2 min-[39.063rem]:row-span-2 min-[57.75rem]:col-span-3 min-[57.75rem]:row-span-2", // Sexto proyecto
                     }[mappingKey] || "col-span-2 row-span-2";
 
                     return (

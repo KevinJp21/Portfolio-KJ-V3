@@ -11,6 +11,10 @@ export const slugMapping = {
         en: "docme-assistant-chatbot",
         es: "asistente-docme-chatbot"
     },
+    "ferreteria-rueda": {
+        en: "ferreteria-rueda",
+        es: "ferreteria-rueda"
+    }
     // ... más mapeos
 };
 

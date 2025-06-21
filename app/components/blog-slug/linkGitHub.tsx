@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { Icon } from "../Icon";
 export default function LinkGitHub({ link }: { link: string }) {
     return (
         <Link
@@ -10,9 +10,7 @@ export default function LinkGitHub({ link }: { link: string }) {
             <span className="text-[var(--Grey-Dark)] text-sm underline underline-offset-2 font-semibold group-hover:text-[var(--Blue-Hover)]">
                 GitHub
             </span>
-            <svg className="w-[30px] h-[30px] fill-[var(--Grey-Dark)] transition-all duration-300 ease-out group-hover:scale-125">
-                <use href="/assets/Icons/Icons.svg#github"></use>
-            </svg>
+            <Icon name="github" className="w-[30px] h-[30px] fill-[var(--Grey-Dark)] transition-all duration-300 ease-out group-hover:scale-125" />
         </Link>
     )
 }
