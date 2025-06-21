@@ -14,7 +14,7 @@ export default function BlogFilters({ technologies, onFilterChange }: BlogFilter
     const t = useTranslations('Blog');
     const [sortBy, setSortBy] = useState<'newest' | 'oldest'>('newest');
     const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
-    const [isTechListVisible, setIsTechListVisible] = useState(true);
+    const [isTechListVisible, setIsTechListVisible] = useState(false);
 
     const handleSortChange = (value: 'newest' | 'oldest') => {
         setSortBy(value);
