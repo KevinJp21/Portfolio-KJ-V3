@@ -1,6 +1,7 @@
-import ThemeSwitch from "@/components/ThemeSwitch";
-import LanguageSwitch from "@/components/LanguageSwitch";
+import ThemeSwitch from "@/app/components/ThemeSwitch";
+import LanguageSwitch from "@/app/components/LanguageSwitch";
 import Link from "next/link";
+import { Icon } from "@/app/components/Icon";
 
 export default function FloatNavBar() {
   return (
@@ -11,37 +12,27 @@ export default function FloatNavBar() {
             <ul className="h-full list-none flex items-center justify-around [&>*]:h-full [&>*]:px-2.5 [&>*]:flex [&>*]:items-center [&>*_a]:h-full [&>*_a]:text-[var(--Grey)] [&>*_a]:transition-normal [&>*_a]:duration-300 [&>*_a]:ease-out [&>*_svg]:h-full [&>*_svg]:fill-[var(--Grey)] [&>*_svg]:transition-all [&>*_svg]:max-w-5 [&>*_svg]:w-full [&>*_svg]:hover:fill-[var(--Blue)] [&>*_svg]:hover:scale-150">
               <li>
                 <Link href="/#Start">
-                  <svg>
-                    <use href="/assets/Icons/Icons.svg#home" />
-                  </svg>
+                  <Icon name="home" />
                 </Link>
               </li>
               <li>
                 <Link href="/#Projects">
-                  <svg>
-                    <use href="/assets/Icons/Icons.svg#project" />
-                  </svg>
+                  <Icon name="project" />
                 </Link>
               </li>
               <li>
                 <Link href="/#About">
-                  <svg>
-                    <use href="/assets/Icons/Icons.svg#about" />
-                  </svg>
+                  <Icon name="about" />
                 </Link>
               </li>
               <li>
                 <Link href="/#Skills">
-                  <svg>
-                    <use href="/assets/Icons/Icons.svg#skills" />
-                  </svg>
+                  <Icon name="skills" />
                 </Link>
               </li>
               <li>
                 <Link href="/#Contact">
-                  <svg>
-                    <use href="/assets/Icons/Icons.svg#contact" />
-                  </svg>
+                  <Icon name="contact" />
                 </Link>
               </li>
               <li className="[&>*_svg]:max-w-6">

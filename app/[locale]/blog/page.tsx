@@ -1,6 +1,6 @@
-import Layout from "@/components/layout/Layout";
-import { getAllPosts } from "@/lib/posts";
-import BlogWithFilters from "@/components/blog/BlogWithFilters";
+import Layout from "@/app/components/layout/Layout";
+import { getAllPosts } from "@/app/lib/posts";
+import BlogWithFilters from "@/app/components/blog/BlogWithFilters";
 
 export default async function Blog({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

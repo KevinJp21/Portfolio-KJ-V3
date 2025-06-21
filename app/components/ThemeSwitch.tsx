@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
+import { Icon } from "./Icon";
 
 export default function ThemeSwitch() {
   const t = useTranslations("Header");
@@ -32,29 +33,21 @@ export default function ThemeSwitch() {
   const renderIcon = () => {
     if (!mounted)
       return (
-        <svg>
-          <use href="/assets/Icons/Icons.svg#monitor" />
-        </svg>
+        <Icon name="monitor" />
       );
     switch (theme) {
       case "light":
         return (
-          <svg>
-            <use href="/assets/Icons/Icons.svg#sun" />
-          </svg>
+          <Icon name="sun" />
         );
       case "dark":
         return (
-          <svg>
-            <use href="/assets/Icons/Icons.svg#moon" />
-          </svg>
+          <Icon name="moon" />
         );
       case "system":
       default:
         return (
-          <svg>
-            <use href="/assets/Icons/Icons.svg#monitor" />
-          </svg>
+          <Icon name="monitor" />
         );
     }
   };

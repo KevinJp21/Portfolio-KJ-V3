@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import ThemeSwitch from "@/components/ThemeSwitch";
+import ThemeSwitch from "@/app/components/ThemeSwitch";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import LanguageSwitch from "@/components/LanguageSwitch";
+import LanguageSwitch from "@/app/components/LanguageSwitch";
 export default function NavBar() {
   const [scroll, setScroll] = useState(false);
   const t = useTranslations("Header");
@@ -17,7 +17,7 @@ export default function NavBar() {
 
 
   return (
-    <header className={`h-[3.75rem] top-0 transition-[top] duration-300 ease-out ${scroll ? "w-[60vw] min-[72.5rem]:w-[50vw] fixed top-5 left-[50%] translate-x-[-50%] right-0 z-100 rounded-full bg-[var(--NavBar-bg)] shadow-[var(--NavBar-Shadow)_5px_0_40px_1px] before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[var(--NavBar-bg)] before:backdrop-blur-sm before:-z-10 before:rounded-full" : ""}`}>
+    <header className={`h-[3.75rem] top-0 transition-[top] duration-300 ease-out ${scroll ? "max-w-[1440px] w-[80vw] min-[72.5rem]:w-[50vw] fixed top-5 left-[50%] translate-x-[-50%] right-0 z-100 rounded-full bg-[var(--NavBar-bg)] shadow-[var(--NavBar-Shadow)_5px_0_40px_1px] before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[var(--NavBar-bg)] before:backdrop-blur-sm before:-z-10 before:rounded-full" : ""}`}>
       <nav className="h-full w-full flex items-center justify-center py-[0.938rem]">
         <div className="h-full w-[90%] flex items-center justify-around px-3">
           <span className={`text-base text-[var(--Grey-Dark)] font-bold ${scroll ? "hidden" : ""}`}>Kevin Julio Pineda</span>

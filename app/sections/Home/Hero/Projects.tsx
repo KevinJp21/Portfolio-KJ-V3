@@ -1,7 +1,7 @@
-import PostCard from "@/components/postCard";
-import { getAllPosts } from "@/lib/posts";
+import PostCard from "@/app/components/postCard";
+import { getAllPosts } from "@/app/lib/posts";
 import { useTranslations } from "next-intl";
-import { slugMapping } from '@/config/slugMapping';
+import { slugMapping } from '@/app/config/slugMapping';
 import Link from "next/link";
 import { useLocale } from "next-intl";
 

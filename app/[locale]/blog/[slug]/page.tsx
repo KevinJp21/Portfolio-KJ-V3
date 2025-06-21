@@ -1,12 +1,13 @@
-import { getPostBySlug } from "@/lib/posts";
+import { getPostBySlug } from "@/app/lib/posts";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { Components } from "react-markdown";
-import Layout from "@/components/layout/Layout";
-import LinkDemo from "@/components/blog-slug/linkDemo";
-import LinkGitHub from "@/components/blog-slug/linkGitHub";
+import Layout from "@/app/components/layout/Layout";
+import LinkDemo from "@/app/components/blog-slug/linkDemo";
+import LinkGitHub from "@/app/components/blog-slug/linkGitHub";
 import { Metadata } from "next";
-import ToolBadge from "@/components/toolBadge";
+import ToolBadge from "@/app/components/toolBadge";
+import { Icon, IconName } from "@/app/components/Icon";
 
 // Componentes personalizados para ReactMarkdown
 const components: Components = {
@@ -179,9 +180,7 @@ export default async function BlogPost({
           </div>
           <ul className="flex flex-wrap gap-[10px] mt-5 mb-4">
             {post.languages?.map((lang, index) => (
-              <ToolBadge key={index} icon={<svg className="w-4 h-4">
-                <use href={`/assets/Icons/Icons.svg?${Date.now()}#${lang}`} />
-              </svg>} name={lang} />
+              <ToolBadge key={index} icon={<Icon name={lang as IconName} className="w-4 h-4" />} name={lang} />
             ))}
           </ul>
           <div className="text-end">

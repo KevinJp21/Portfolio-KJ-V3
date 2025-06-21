@@ -1,7 +1,7 @@
 'use client';
 import { useState, useMemo } from 'react';
-import { PostMeta } from '@/lib/posts';
-import PostCard from '@/components/postCard';
+import { PostMeta } from '@/app/lib/posts';
+import PostCard from '@/app/components/postCard';
 import BlogFilters from './BlogFilters';
 
 interface BlogWithFiltersProps {

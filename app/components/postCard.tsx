@@ -1,7 +1,7 @@
-import { PostMeta } from "@/lib/posts";
+import { PostMeta } from "@/app/lib/posts";
 import Link from "next/link";
 import ToolBadge from "./toolBadge";
-import Icon from "./Icon";
+import { Icon, IconName } from "./Icon";
 
 export default function PostCard({ post, className = "", locale }: { post: PostMeta, className?: string, locale: string }) {
     return (
@@ -34,8 +34,8 @@ export default function PostCard({ post, className = "", locale }: { post: PostM
                             <h3 className="text-[var(--White)] text-[min(35px,7vw)] font-semibold">{post.title}</h3>
                         </Link>
                         <ul className="flex flex-wrap gap-[10px]">
-                            {post.languages?.map((lang, index) => (
-                                <ToolBadge key={index} icon={<Icon name={lang} className="w-4 h-4" />} name={lang} />
+                            {post.languages?.map((lang: string, index: number) => (
+                                <ToolBadge key={index} icon={<Icon name={lang as IconName} className="w-4 h-4" />} name={lang} />
                             ))}
                         </ul>
                     </div>

@@ -1,7 +1,7 @@
-import Layout from "@/components/layout/Layout";
-import About from "@/sections/Home/Hero/About";
-import Hero from "@/sections/Home/Hero/Hero";
-import Projects from "@/sections/Home/Hero/Projects";
+import Layout from "@/app/components/layout/Layout";
+import About from "@/app/sections/Home/Hero/About";
+import Hero from "@/app/sections/Home/Hero/Hero";
+import Projects from "@/app/sections/Home/Hero/Projects";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
 
