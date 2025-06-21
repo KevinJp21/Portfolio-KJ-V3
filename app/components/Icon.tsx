@@ -4,13 +4,10 @@ import { type IconName } from "@/types/name";
 export { IconName };
 export function Icon({
   name,
-  childClassName,
   className,
-  children,
   ...props
 }: SVGProps<SVGSVGElement> & {
   name: IconName;
-  childClassName?: string;
 }) {
   return (
     <svg
