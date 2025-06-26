@@ -28,12 +28,12 @@ export default function Hero() {
                         {t("Home.content")}
                     </ReactMarkdown>
                     <div className="flex justify-center gap-2.5 mt-2.5">
-                        <a href="/assets/Docs/KevinJPCV.pdf" target="_blank" className="flex justify-center items-center w-[8.875rem] h-10 rounded-4xl cursor-pointer bg-[var(--Blue)] text-[var(--White)] font-semibold text-center text-sm hover:bg-[var(--Blue-Hover)] transition-all duration-300">
+                        <Link href="/assets/Docs/KevinJPCV.pdf" target="_blank" className="flex justify-center items-center w-[8.875rem] h-10 rounded-4xl cursor-pointer bg-[var(--Blue)] text-white font-semibold text-center text-sm hover:bg-[var(--Blue-Hover)] transition-all duration-300" title="Download CV">
                             {t("Home.btnCV")}
-                        </a>
-                        <Link href="mailto:kevinjp21@gmail.com" className="flex justify-center items-center w-[8.875rem] h-10 rounded-4xl cursor-pointer bg-[var(--Blue)] text-[var(--White)] font-semibold text-center text-sm hover:bg-[var(--Blue-Hover)] transition-all duration-300">
-                            {t("Home.btnContact")}
                         </Link>
+                        <a href="mailto:kevinjp21@gmail.com" className="flex justify-center items-center w-[8.875rem] h-10 rounded-4xl cursor-pointer bg-[var(--Blue)] text-white font-semibold text-center text-sm hover:bg-[var(--Blue-Hover)] transition-all duration-300" title="Contact me">
+                            {t("Home.btnContact")}
+                        </a>
                     </div>
                     <div className="mt-5 flex justify-center items-center gap-1 list-none [&>*]:p-1.5 [&>*_svg]:w-10 [&>*_svg]:h-10 [&>*_svg]:fill-[var(--Grey-Dark)] [&>*_svg]:transition-all [&>*_svg]:duration-300 [&>*_svg]:ease-out [&>*_svg]:hover:scale-125">
                         <Link href="https://www.linkedin.com/in/kevin-julio-667280240/" target="_blank" title="LinkedIn">

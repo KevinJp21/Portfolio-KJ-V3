@@ -97,11 +97,14 @@ export async function generateMetadata({
   }
 
   const description = post.description;
+  const title = post.title;
+
+  const baseUrl = "https://kevinjp.dev";
+  const currentUrl = locale === 'es' ? `${baseUrl}/es/blog/${slug}` : `${baseUrl}/en/blog/${slug}`;
 
   return {
-    title: `${post.title} | Kevin Julio Pineda Portfolio`,
+    title: `${title} | Kevin Julio Pineda Portfolio`,
     description,
-    keywords: post.keywords,
     authors: [{ name: 'Kevin Julio Pineda' }],
     creator: 'Kevin Julio Pineda',
     publisher: 'Kevin Julio Pineda',
@@ -110,12 +113,12 @@ export async function generateMetadata({
       address: false,
       telephone: false,
     },
-    metadataBase: new URL('https://kevinjp.dev'),
+    metadataBase: new URL(baseUrl),
     alternates: {
-      canonical: `/blog/${slug}`,
+      canonical: currentUrl,
       languages: {
-        'es': `/es/blog/${slug}`,
-        'en': `/en/blog/${slug}`,
+        "en": `${baseUrl}/en/blog/${slug}`,
+        "es": `${baseUrl}/es/blog/${slug}`,
       },
     },
     openGraph: {

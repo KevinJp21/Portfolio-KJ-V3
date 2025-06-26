@@ -18,8 +18,7 @@
         "btnContact": "Contact me",
         "metaData": {
             "title": "Kevin Julio Pineda | Portfolio",
-            "description": "I'm Kevin Julio Pineda (KevinJp), a systems engineer specialized in Full-Stack development. Explore my portfolio to see my projects, skills, and professional experience.",
-            "keywords": "Kevin Julio Pineda, KevinJp, portfolio, Full-Stack development, systems engineer, web developer, web applications, frontend, backend, Colombia, React, TypeScript, JavaScript, Remix, NextJS, Angular, TailwindCSS, GraphQL, Shopify, MySQL, Java, Python, PHP, ExpressJS, Flask, SQLAlchemy, artificial intelligence, TensorFlow, Keras, NLTK, ScikitLearn, Pandas, NumPy, Git, npm, pnpm, software development, tech solutions, web programming"
+            "description": "I'm Kevin Julio Pineda (KevinJp), a systems engineer specialized in Full-Stack development. Explore my portfolio to see my projects, skills, and professional experience."
         }
     },
     "About": {
@@ -39,8 +38,7 @@
     "Blog": {
         "metaData": {
             "title": "Blog - Kevin Julio Pineda | Portfolio",
-            "description": "Explore my web development projects and articles on programming, machine learning, and tech trends.",
-            "keywords": "blog, portfolio, projects, web development, programming, machine learning, technology, full-stack"
+            "description": "Explore my web development projects and articles on programming, machine learning, and tech trends."
         },
         "sortBy": "Sort by",
         "newest": "Newest",

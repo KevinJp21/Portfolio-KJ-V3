@@ -4,14 +4,8 @@ import { getAllPosts } from './lib/posts';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://kevinjp.dev';
   
-  // URLs estáticas
+  // URLs estáticas - prioridad a las páginas de idioma específico
   const staticUrls = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 1,
-    },
     {
       url: `${baseUrl}/es`,
       lastModified: new Date(),

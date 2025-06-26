@@ -13,7 +13,6 @@ interface Messages extends AbstractIntlMessages {
     metaData: {
       title: string;
       description: string;
-      keywords: string;
     };
   };
 }
@@ -27,13 +26,12 @@ export async function generateMetadata({
   const messages = await getMessages({locale}) as Messages;
   const title = messages.Home.metaData?.title;
   const description = messages.Home.metaData?.description;
-  const keywords = messages.Home.metaData?.keywords;
-  const url = "https://kevinjp.dev/";
+  const baseUrl = "https://kevinjp.dev";
+  const currentUrl = locale === 'es' ? `${baseUrl}/es` : `${baseUrl}/en`;
 
   return {
     title: `${title} | Kevin Julio Pineda Portfolio`,
     description,
-    keywords,
     authors: [{ name: 'Kevin Julio Pineda' }],
     creator: 'Kevin Julio Pineda',
     publisher: 'Kevin Julio Pineda',
@@ -44,16 +42,16 @@ export async function generateMetadata({
     },
     metadataBase: new URL('https://kevinjp.dev'),
     alternates: {
-      canonical: url,
+      canonical: currentUrl,
       languages: {
-        "en": `${url}en`,
-        "es": `${url}es`,
+        "en": `${baseUrl}/en`,
+        "es": `${baseUrl}/es`,
       },
     },
     openGraph: {
       title: `${title} | Kevin Julio Pineda Portfolio`,
       description,
-      url: url,
+      url: currentUrl,
       siteName: 'Kevin Julio Pineda Portfolio',
       locale: locale,
       type: 'website',
