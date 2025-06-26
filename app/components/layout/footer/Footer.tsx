@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Icon } from "../../Icon";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+    const t = useTranslations("Home");
     return (
         <footer className="h-16 flex items-end justify-center">
             <div className="relative w-[80%] py-4 flex justify-around gap-5 items-center before:content-[''] before:absolute before:top-0 before:h-px before:w-full before:bg-[var(--Grey-Dark)]">
@@ -20,7 +22,7 @@ export default function Footer() {
                         </Link>
                     </li>
                     <li>
-                    <Link href="mailto: kevinjp821@gmail.com" target="_blank" title="Contact me">
+                    <Link href="mailto: kevinjp821@gmail.com" target="_blank" title={t("btnContact")}>
                             <Icon name="contact" />
                         </Link>
                     </li>

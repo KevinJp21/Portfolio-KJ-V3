@@ -6,8 +6,10 @@ import { Icon } from "@/app/components/Icon";
 import { useActiveSection } from "@/app/hooks/useActiveSection";
 import { useNavbarNavigation } from "@/app/hooks/useNavbarNavigation";
 import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export default function FloatNavBar() {
+  const t = useTranslations("Header");
   const activeSection = useActiveSection();
   const locale = useLocale();
   const { navigateToSection } = useNavbarNavigation();
@@ -32,7 +34,7 @@ export default function FloatNavBar() {
           <div className="w-full h-full">
             <ul className="h-full list-none flex items-center justify-around [&>*]:h-full [&>*]:px-2.5 [&>*]:flex [&>*]:items-center [&>*_a]:h-full [&>*_a]:text-[var(--Grey)] [&>*_a]:transition-normal [&>*_a]:duration-300 [&>*_a]:ease-out [&>*_svg]:h-full [&>*_svg]:fill-[var(--Grey)] [&>*_svg]:max-w-5 [&>*_svg]:w-full [&>*_svg]:transition-all [&>*_svg]:duration-300 [&>*_svg]:hover:[filter:drop-shadow(0_0_10px_var(--Blue))] [&>*_svg]:hover:scale-120">
               <li>
-                <Link href={`/${locale}`}>
+                <Link href={`/${locale}`} title={t("hero")}>
                   <Icon 
                     name="home" 
                     className={isLinkActive(`/${locale}`) ? "icon-hover" : ""}
@@ -40,7 +42,7 @@ export default function FloatNavBar() {
                 </Link>
               </li>
               <li>
-                <a href="#about-me" onClick={(e) => handleSectionClick(e, "about-me")}>
+                <a href="#about-me" onClick={(e) => handleSectionClick(e, "about-me")} title={t("about")}>
                   <Icon 
                     name="about" 
                     className={isLinkActive("#about-me") ? "icon-hover" : ""}
@@ -48,7 +50,7 @@ export default function FloatNavBar() {
                 </a>
               </li>
               <li>
-                <a href="#projects" onClick={(e) => handleSectionClick(e, "projects")}>
+                <a href="#projects" onClick={(e) => handleSectionClick(e, "projects")} title={t("projects")}>
                   <Icon 
                     name="project" 
                     className={isLinkActive("#projects") ? "icon-hover" : ""}
@@ -56,7 +58,7 @@ export default function FloatNavBar() {
                 </a>
               </li>
               <li>
-                <a href="#skills" onClick={(e) => handleSectionClick(e, "skills")}>
+                <a href="#skills" onClick={(e) => handleSectionClick(e, "skills")} title={t("skills")}>
                   <Icon 
                     name="skills" 
                     className={isLinkActive("#skills") ? "icon-hover" : ""}
@@ -64,7 +66,7 @@ export default function FloatNavBar() {
                 </a>
               </li>
               <li>
-                <Link href={`/${locale}/blog`}>
+                <Link href={`/${locale}/blog`} title={t("blog")}>
                   <Icon name="blog" />
                 </Link>
               </li>

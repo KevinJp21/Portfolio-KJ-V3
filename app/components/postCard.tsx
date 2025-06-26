@@ -17,7 +17,7 @@ export default function PostCard({ post, className = "", locale }: { post: PostM
                 <div className="flex justify-end p-[10px]">
                     {post.demo && (
                         <a
-                            title='DemoProject'
+                            title='Demo'
                             className="block w-5 h-5 transition-colors duration-300 ease-in-out hover:fill-[var(--Blue-Hover)]"
                             target="_blank"
                             href={post.demo}

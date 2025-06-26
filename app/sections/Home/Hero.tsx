@@ -13,7 +13,7 @@ const components: Components = {
 }
 
 export default function Hero() {
-    const t = useTranslations();
+    const t = useTranslations("Home");
     return(
         <section id="home" className="min-h-[37.5rem] flex items-center justify-center py-8 px-5 mx-auto  mt-[6.25rem] min-md:mt-0 max-w-[90rem] w-full">
             <div className="w-full h-full flex justify-center items-center lg:gap-10 flex-wrap">
@@ -22,17 +22,17 @@ export default function Hero() {
                 </div>
                 <div className="max-w-[35rem] w-full">
                     <h1 className="text-[min(3.125rem,9vw)] md:text-5xl  text-[var(--Grey-Dark)] text-center font-semibold p-1 leading-15 text-balance">
-                        {t("Home.name")}
+                        {t("name")}
                     </h1>
                     <ReactMarkdown components={components}>
-                        {t("Home.content")}
+                        {t("content")}
                     </ReactMarkdown>
                     <div className="flex justify-center gap-2.5 mt-2.5">
-                        <Link href="/assets/Docs/KevinJPCV.pdf" target="_blank" className="flex justify-center items-center w-[8.875rem] h-10 rounded-4xl cursor-pointer bg-[var(--Blue)] text-white font-semibold text-center text-sm hover:bg-[var(--Blue-Hover)] transition-all duration-300" title="Download CV">
-                            {t("Home.btnCV")}
-                        </Link>
-                        <a href="mailto:kevinjp21@gmail.com" className="flex justify-center items-center w-[8.875rem] h-10 rounded-4xl cursor-pointer bg-[var(--Blue)] text-white font-semibold text-center text-sm hover:bg-[var(--Blue-Hover)] transition-all duration-300" title="Contact me">
-                            {t("Home.btnContact")}
+                        <a href="/assets/Docs/KevinJPCV.pdf" target="_blank" className="flex justify-center items-center w-[8.875rem] h-10 rounded-4xl cursor-pointer bg-[var(--Blue)] text-white font-semibold text-center text-sm hover:bg-[var(--Blue-Hover)] transition-all duration-300" title={t("btnCV")}>
+                            {t("btnCV")}
+                        </a>
+                        <a href="mailto:kevinjp21@gmail.com" className="flex justify-center items-center w-[8.875rem] h-10 rounded-4xl cursor-pointer bg-[var(--Blue)] text-white font-semibold text-center text-sm hover:bg-[var(--Blue-Hover)] transition-all duration-300" title={t("btnContact")}>
+                            {t("btnContact")}
                         </a>
                     </div>
                     <div className="mt-5 flex justify-center items-center gap-1 list-none [&>*]:p-1.5 [&>*_svg]:w-10 [&>*_svg]:h-10 [&>*_svg]:fill-[var(--Grey-Dark)] [&>*_svg]:transition-all [&>*_svg]:duration-300 [&>*_svg]:ease-out [&>*_svg]:hover:scale-125">

@@ -45,8 +45,9 @@ export default function NavBar() {
                 <Link 
                   href={`/${locale}`} 
                   className={isLinkActive(`/${locale}`) ? "text-[var(--Blue)]!" : ""}
+                  title={t("hero")}
                 >
-                  {t("start")}
+                  {t("hero")}
                 </Link>
               </li>
               <li>
@@ -54,6 +55,7 @@ export default function NavBar() {
                   href="#about-me"
                   onClick={(e) => handleSectionClick(e, "about-me")}
                   className={isLinkActive("#about-me") ? "text-[var(--Blue)]!" : ""}
+                  title={t("about")}
                 >
                   {t("about")}
                 </a>
@@ -63,6 +65,7 @@ export default function NavBar() {
                   href="#projects"
                   onClick={(e) => handleSectionClick(e, "projects")}
                   className={isLinkActive("#projects") ? "text-[var(--Blue)]!" : ""}
+                  title={t("projects")}
                 >
                   {t("projects")}
                 </a>
@@ -72,12 +75,13 @@ export default function NavBar() {
                   href="#skills"
                   onClick={(e) => handleSectionClick(e, "skills")}
                   className={isLinkActive("#skills") ? "text-[var(--Blue)]!" : ""}
+                  title={t("skills")}
                 >
                   {t("skills")}
                 </a>
               </li>
               <li>
-                <Link href={`/${locale}/blog`}>{t("blog")}</Link>
+                <Link href={`/${locale}/blog`} title={t("blog")}>{t("blog")}</Link>
               </li>
               <li>
                 <ThemeSwitch />
