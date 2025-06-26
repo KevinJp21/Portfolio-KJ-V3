@@ -37,7 +37,7 @@ export default function NavBar() {
               <li>
                 <Link 
                   href={`/${locale}`} 
-                  className={isLinkActive(`/${locale}`) ? "icon-hover" : ""}
+                  className={isLinkActive(`/${locale}`) ? "text-[var(--Blue)]!" : ""}
                 >
                   {t("start")}
                 </Link>
@@ -45,7 +45,7 @@ export default function NavBar() {
               <li>
                 <Link 
                   href="#about-me" 
-                  className={isLinkActive("#about-me") ? "icon-hover" : ""}
+                  className={isLinkActive("#about-me") ? "text-[var(--Blue)]!" : ""}
                 >
                   {t("about")}
                 </Link>
@@ -53,7 +53,7 @@ export default function NavBar() {
               <li>
                 <Link 
                   href="#projects" 
-                  className={isLinkActive("#projects") ? "icon-hover" : ""}
+                  className={isLinkActive("#projects") ? "text-[var(--Blue)]!" : ""}
                 >
                   {t("projects")}
                 </Link>
@@ -61,7 +61,7 @@ export default function NavBar() {
               <li>
                 <Link 
                   href="#skills" 
-                  className={isLinkActive("#skills") ? "icon-hover" : ""}
+                  className={isLinkActive("#skills") ? "text-[var(--Blue)]!" : ""}
                 >
                   {t("skills")}
                 </Link>
