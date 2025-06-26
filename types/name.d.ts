@@ -2,6 +2,7 @@
 
 export type IconName =
 	| "about"
+	| "blog"
 	| "contact"
 	| "Flask"
 	| "github"

@@ -45,6 +45,10 @@ body {
   .ContentSkills{
     @apply grid grid-cols-[repeat(auto-fill,150px)] auto-rows-[100px] place-content-center gap-5 w-full p-5;
   }
+
+  .icon-hover {
+    @apply transition-all duration-300 drop-shadow-[0_0_10px_var(--Blue)] scale-120;
+  }
 }
 
 .lazy-section {

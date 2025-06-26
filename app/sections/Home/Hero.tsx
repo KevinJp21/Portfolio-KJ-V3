@@ -15,7 +15,7 @@ const components: Components = {
 export default function Hero() {
     const t = useTranslations();
     return(
-        <section className="min-h-[37.5rem] flex items-center justify-center py-8 px-5 mx-auto  mt-[6.25rem] min-md:mt-0 max-w-[90rem] w-full">
+        <section id="home" className="min-h-[37.5rem] flex items-center justify-center py-8 px-5 mx-auto  mt-[6.25rem] min-md:mt-0 max-w-[90rem] w-full">
             <div className="w-full h-full flex justify-center items-center lg:gap-10 flex-wrap">
                 <div className="relative flex justify-center items-center h-[25rem] w-[25rem] [background:var(--imgBG)] [clip-path:circle()]">
                   <img src="https://c98agni2tvccp34z.public.blob.vercel-storage.com/KevinJP-5hmwapH3CNtol4B4NGZKO6cZY7Ruvq.avif" alt="Kevin Julio Pineda" className="w-full h-full object-contain " />

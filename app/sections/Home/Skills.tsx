@@ -40,7 +40,7 @@ export default function Skills() {
   ]
 
   return (
-    <section className="lazy-section container-section [&>_h3]:relative [&>_h3]:w-full [&>_h3]:h-[2.313rem] [&>_h3]:text-left [&>_h3]:text-[var(--Blue)] [&>_h3]:text-2xl [&>_h3]:ps-3.5 [&>_h3]:mt-5 [&>_h3]:before:absolute [&>_h3]:before:top-0 [&>_h3]:before:left-0 [&>_h3]:before:content-[''] [&>_h3]:before:w-1.5 [&>_h3]:before:h-full [&>_h3]:before:bg-[var(--Blue)] [&>_h3]:before:mr-5">
+    <section id="skills" className="lazy-section container-section [&>_h3]:relative [&>_h3]:w-full [&>_h3]:h-[2.313rem] [&>_h3]:text-left [&>_h3]:text-[var(--Blue)] [&>_h3]:text-2xl [&>_h3]:ps-3.5 [&>_h3]:mt-5 [&>_h3]:before:absolute [&>_h3]:before:top-0 [&>_h3]:before:left-0 [&>_h3]:before:content-[''] [&>_h3]:before:w-1.5 [&>_h3]:before:h-full [&>_h3]:before:bg-[var(--Blue)] [&>_h3]:before:mr-5">
       <h2 className="home-title">{t('title')}</h2>
       <h3>{t('SubTitle1')}</h3>
       <div className="ContentSkills">
