@@ -3,6 +3,7 @@ import About from "@/app/sections/Home/About";
 import Hero from "@/app/sections/Home/Hero";
 import Projects from "@/app/sections/Home/Projects";
 import Skills from "@/app/sections/Home/Skills";
+import ScrollToSection from "@/app/components/ScrollToSection";
 import { AbstractIntlMessages } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Metadata } from "next";
@@ -82,6 +83,7 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
   
   return (
     <Layout>
+      <ScrollToSection />
       <Hero />
       <About />
       <Projects params={{locale}} />

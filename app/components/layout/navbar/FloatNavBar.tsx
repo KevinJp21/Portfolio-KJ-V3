@@ -4,17 +4,25 @@ import LanguageSwitch from "@/app/components/LanguageSwitch";
 import Link from "next/link";
 import { Icon } from "@/app/components/Icon";
 import { useActiveSection } from "@/app/hooks/useActiveSection";
+import { useNavbarNavigation } from "@/app/hooks/useNavbarNavigation";
 import { useLocale } from "next-intl";
 
 export default function FloatNavBar() {
   const activeSection = useActiveSection();
   const locale = useLocale();
+  const { navigateToSection } = useNavbarNavigation();
+
   const isLinkActive = (href: string) => {
     if (href === `/${locale}` && activeSection === "home") return true;
     if (href === "#about-me" && activeSection === "about-me") return true;
     if (href === "#projects" && activeSection === "projects") return true;
     if (href === "#skills" && activeSection === "skills") return true;
     return false;
+  };
+
+  const handleSectionClick = (e: React.MouseEvent, section: string) => {
+    e.preventDefault();
+    navigateToSection(section, locale);
   };
 
   return (
@@ -32,28 +40,28 @@ export default function FloatNavBar() {
                 </Link>
               </li>
               <li>
-                <Link href="#about-me">
+                <a href="#about-me" onClick={(e) => handleSectionClick(e, "about-me")}>
                   <Icon 
                     name="about" 
                     className={isLinkActive("#about-me") ? "icon-hover" : ""}
                   />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#projects">
+                <a href="#projects" onClick={(e) => handleSectionClick(e, "projects")}>
                   <Icon 
                     name="project" 
                     className={isLinkActive("#projects") ? "icon-hover" : ""}
                   />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#skills">
+                <a href="#skills" onClick={(e) => handleSectionClick(e, "skills")}>
                   <Icon 
                     name="skills" 
                     className={isLinkActive("#skills") ? "icon-hover" : ""}
                   />
-                </Link>
+                </a>
               </li>
               <li>
                 <Link href={`/${locale}/blog`}>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LanguageSwitch from "@/app/components/LanguageSwitch";
 import { useActiveSection } from "@/app/hooks/useActiveSection";
+import { useNavbarNavigation } from "@/app/hooks/useNavbarNavigation";
 import { useLocale } from "next-intl";
 
 export default function NavBar() {
@@ -12,6 +13,7 @@ export default function NavBar() {
   const t = useTranslations("Header");
   const activeSection = useActiveSection();
   const locale = useLocale();
+  const { navigateToSection } = useNavbarNavigation();
 
   useEffect(() => {
     const onScroll = () => setScroll(window.scrollY > 50);
@@ -25,6 +27,11 @@ export default function NavBar() {
     if (href === "#projects" && activeSection === "projects") return true;
     if (href === "#skills" && activeSection === "skills") return true;
     return false;
+  };
+
+  const handleSectionClick = (e: React.MouseEvent, section: string) => {
+    e.preventDefault();
+    navigateToSection(section, locale);
   };
 
   return (
@@ -43,28 +50,31 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="#about-me" 
+                <a 
+                  href="#about-me"
+                  onClick={(e) => handleSectionClick(e, "about-me")}
                   className={isLinkActive("#about-me") ? "text-[var(--Blue)]!" : ""}
                 >
                   {t("about")}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link 
-                  href="#projects" 
+                <a 
+                  href="#projects"
+                  onClick={(e) => handleSectionClick(e, "projects")}
                   className={isLinkActive("#projects") ? "text-[var(--Blue)]!" : ""}
                 >
                   {t("projects")}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link 
-                  href="#skills" 
+                <a 
+                  href="#skills"
+                  onClick={(e) => handleSectionClick(e, "skills")}
                   className={isLinkActive("#skills") ? "text-[var(--Blue)]!" : ""}
                 >
                   {t("skills")}
-                </Link>
+                </a>
               </li>
               <li>
                 <Link href={`/${locale}/blog`}>{t("blog")}</Link>
