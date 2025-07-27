@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { getAllPosts } from '../app/lib/posts';
+import { getSlugForLocale } from '../app/config/slugMapping';
 
 interface SitemapUrl {
   loc: string;
@@ -31,7 +32,7 @@ Sitemap: ${baseUrl}/sitemap.xml
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 
   fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
-  console.log('✅ robots.txt generado');
+  console.log('robots.txt generado');
 }
 
 function generateSitemap(): void {
@@ -80,38 +81,48 @@ function generateSitemap(): void {
     });
   }
 
-  // URLs de posts con manejo de errores - exactamente como en tu ejemplo
+  // URLs de posts con manejo de errores - usando slugMapping
   let postUrlsEs: SitemapUrl[] = [];
   let postUrlsEn: SitemapUrl[] = [];
 
   try {
     const postsEs = getAllPosts('es');
-    postUrlsEs = postsEs.map((post) => ({
-      loc: `${baseUrl}/es/blog/${post.slug}`,
-      lastmod: new Date(post.modifiedTime).toISOString(),
-      changefreq: 'monthly',
-      priority: 0.6,
-      alternateRefs: [
-        { href: `${baseUrl}/en/blog/${post.slug}`, hreflang: 'en' },
-        { href: `${baseUrl}/es/blog/${post.slug}`, hreflang: 'es' },
-      ],
-    }));
+    postUrlsEs = postsEs.map((post) => {
+      const slugEn = getSlugForLocale(post.slug, 'en');
+      const slugEs = getSlugForLocale(post.slug, 'es');
+      
+      return {
+        loc: `${baseUrl}/es/blog/${slugEs}`,
+        lastmod: new Date(post.modifiedTime).toISOString(),
+        changefreq: 'monthly',
+        priority: 0.6,
+        alternateRefs: [
+          { href: `${baseUrl}/en/blog/${slugEn}`, hreflang: 'en' },
+          { href: `${baseUrl}/es/blog/${slugEs}`, hreflang: 'es' },
+        ],
+      };
+    });
   } catch (error) {
     console.error('Error getting Spanish posts:', error);
   }
 
   try {
     const postsEn = getAllPosts('en');
-    postUrlsEn = postsEn.map((post) => ({
-      loc: `${baseUrl}/en/blog/${post.slug}`,
-      lastmod: new Date(post.modifiedTime).toISOString(),
-      changefreq: 'monthly',
-      priority: 0.6,
-      alternateRefs: [
-        { href: `${baseUrl}/en/blog/${post.slug}`, hreflang: 'en' },
-        { href: `${baseUrl}/es/blog/${post.slug}`, hreflang: 'es' },
-      ],
-    }));
+    postUrlsEn = postsEn.map((post) => {
+      const slugEn = getSlugForLocale(post.slug, 'en');
+      const slugEs = getSlugForLocale(post.slug, 'es');
+      
+      return {
+        loc: `${baseUrl}/en/blog/${slugEn}`,
+        lastmod: new Date(post.modifiedTime).toISOString(),
+        changefreq: 'monthly',
+        priority: 0.6,
+        alternateRefs: [
+          { href: `${baseUrl}/en/blog/${slugEn}`, hreflang: 'en' },
+          { href: `${baseUrl}/es/blog/${slugEs}`, hreflang: 'es' },
+        ],
+      };
+    });
   } catch (error) {
     console.error('Error getting English posts:', error);
   }

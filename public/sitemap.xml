@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kevinjp.dev/es</loc>
-    <lastmod>2025-07-27T22:15:14.025Z</lastmod>
+    <lastmod>2025-07-27T22:37:07.972Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en" />
@@ -10,7 +11,7 @@
   </url>
   <url>
     <loc>https://kevinjp.dev/en</loc>
-    <lastmod>2025-07-27T22:15:14.025Z</lastmod>
+    <lastmod>2025-07-27T22:37:07.972Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en" />
@@ -18,7 +19,7 @@
   </url>
   <url>
     <loc>https://kevinjp.dev/es/blog</loc>
-    <lastmod>2025-07-27T22:15:14.025Z</lastmod>
+    <lastmod>2025-07-27T22:37:07.972Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en" />
@@ -26,7 +27,7 @@
   </url>
   <url>
     <loc>https://kevinjp.dev/en/blog</loc>
-    <lastmod>2025-07-27T22:15:14.025Z</lastmod>
+    <lastmod>2025-07-27T22:37:07.972Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en" />
@@ -37,7 +38,7 @@
     <lastmod>2024-05-11T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/asistente-docme-chatbot" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/docme-assistant-chatbot" />
     <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/asistente-docme-chatbot" />
   </url>
   <url>
@@ -78,7 +79,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/docme-assistant-chatbot" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/docme-assistant-chatbot" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/asistente-docme-chatbot" />
   </url>
   <url>
     <loc>https://kevinjp.dev/en/blog/ferreteria-rueda</loc>
