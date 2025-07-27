@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://kevinjp.dev/es</loc>
+    <lastmod>2025-07-27T22:15:14.025Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/en</loc>
+    <lastmod>2025-07-27T22:15:14.025Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/es/blog</loc>
+    <lastmod>2025-07-27T22:15:14.025Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/en/blog</loc>
+    <lastmod>2025-07-27T22:15:14.025Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/es/blog/asistente-docme-chatbot</loc>
+    <lastmod>2024-05-11T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/asistente-docme-chatbot" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/asistente-docme-chatbot" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/es/blog/chikos-gourmet</loc>
+    <lastmod>2024-10-28T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/chikos-gourmet" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/chikos-gourmet" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/es/blog/ferreteria-rueda</loc>
+    <lastmod>2025-05-10T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/ferreteria-rueda" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/ferreteria-rueda" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/es/blog/verezza-e-commerce</loc>
+    <lastmod>2024-11-15T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/verezza-e-commerce" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/verezza-e-commerce" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/en/blog/chikos-gourmet</loc>
+    <lastmod>2024-10-28T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/chikos-gourmet" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/chikos-gourmet" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/en/blog/docme-assistant-chatbot</loc>
+    <lastmod>2024-05-11T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/docme-assistant-chatbot" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/docme-assistant-chatbot" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/en/blog/ferreteria-rueda</loc>
+    <lastmod>2025-05-10T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/ferreteria-rueda" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/ferreteria-rueda" />
+  </url>
+  <url>
+    <loc>https://kevinjp.dev/en/blog/verezza-e-commerce</loc>
+    <lastmod>2024-11-15T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kevinjp.dev/en/blog/verezza-e-commerce" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://kevinjp.dev/es/blog/verezza-e-commerce" />
+  </url>
+</urlset>
