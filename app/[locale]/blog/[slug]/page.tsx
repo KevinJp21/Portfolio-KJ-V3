@@ -81,11 +81,7 @@ const components: Components = {
   ),
 };
 
-export async function generateMetadata({
-  params
-}: {
-  params: Promise<{ slug: string; locale: string }>
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
   const { slug, locale } = await params;
   const post = getPostBySlug(slug, locale);
 
@@ -93,59 +89,57 @@ export async function generateMetadata({
     return {
       title: 'Entrada no encontrada | Kevin Julio Pineda Portfolio',
       description: 'La entrada del blog que buscas no existe.',
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
-  const description = post.description;
-  const title = post.title;
+  const { title, description, image, publishedTime, modifiedTime } = post;
 
   const baseUrl = "https://kevinjp.dev";
-  const currentUrl = locale === 'es' ? `${baseUrl}/es/blog/${slug}` : `${baseUrl}/en/blog/${slug}`;
+  const currentUrl = locale === 'es'
+    ? `${baseUrl}/es/blog/${slug}`
+    : `${baseUrl}/en/blog/${slug}`;
+
+  const defaultImage = 'https://c98agni2tvccp34z.public.blob.vercel-storage.com/KevinJP-5hmwapH3CNtol4B4NGZKO6cZY7Ruvq.avif';
 
   return {
     title: `${title} | Kevin Julio Pineda Portfolio`,
     description,
-    authors: [{ name: 'Kevin Julio Pineda' }],
-    creator: 'Kevin Julio Pineda',
-    publisher: 'Kevin Julio Pineda',
-    formatDetection: {
-      email: false,
-      address: false,
-      telephone: false,
-    },
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: currentUrl,
       languages: {
-        "en": `${baseUrl}/en/blog/${slug}`,
-        "es": `${baseUrl}/es/blog/${slug}`,
+        'x-default': `${baseUrl}/es/blog/${slug}`,
+        en: `${baseUrl}/en/blog/${slug}`,
+        es: `${baseUrl}/es/blog/${slug}`,
       },
     },
     openGraph: {
-      title: post.title,
+      title: `${title} | Kevin Julio Pineda Portfolio`,
       description,
-      url: `${locale}/blog/${slug}`,
-      siteName: 'Kevin Julio Pineda Portfolio',
-      images: [
-        {
-          url: post.image || 'https://c98agni2tvccp34z.public.blob.vercel-storage.com/KevinJP-5hmwapH3CNtol4B4NGZKO6cZY7Ruvq.avif', // Imagen por defecto
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
-      locale: locale,
+      url: currentUrl,
       type: 'article',
-      publishedTime: post.publishedTime,
-      modifiedTime: post.modifiedTime,
+      siteName: 'Kevin Julio Pineda Portfolio',
+      images: [{
+        url: image || defaultImage,
+        width: 1200,
+        height: 630,
+        alt: title,
+      }],
+      locale: locale === 'es' ? 'es_ES' : 'en_US',
+      publishedTime,
+      modifiedTime,
       authors: ['Kevin Julio Pineda'],
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: `${title} | Kevin Julio Pineda Portfolio`,
       description,
-      images: [post.image || 'https://c98agni2tvccp34z.public.blob.vercel-storage.com/KevinJP-5hmwapH3CNtol4B4NGZKO6cZY7Ruvq.avif'],
       creator: '@kevinjpdev',
+      images: [image || defaultImage],
     },
     robots: {
       index: true,
@@ -158,9 +152,16 @@ export async function generateMetadata({
         'max-snippet': -1,
       },
     },
+    authors: [{ name: 'Kevin Julio Pineda' }],
+    creator: 'Kevin Julio Pineda',
+    publisher: 'Kevin Julio Pineda',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
   };
 }
-
 export default async function BlogPost({
   params,
 }: {

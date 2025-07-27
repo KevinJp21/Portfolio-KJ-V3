@@ -17,11 +17,7 @@ interface Messages extends AbstractIntlMessages {
   };
 }
 
-export async function generateMetadata({
-  params
-}: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const messages = await getMessages({locale}) as Messages;
   const title = messages.Home.metaData?.title;
@@ -30,7 +26,7 @@ export async function generateMetadata({
   const currentUrl = locale === 'es' ? `${baseUrl}/es` : `${baseUrl}/en`;
 
   return {
-    title: `${title} | Kevin Julio Pineda Portfolio`,
+    title: `${title}`,
     description,
     authors: [{ name: 'Kevin Julio Pineda' }],
     creator: 'Kevin Julio Pineda',
@@ -44,12 +40,13 @@ export async function generateMetadata({
     alternates: {
       canonical: currentUrl,
       languages: {
+        "x-default": `${baseUrl}/es`,
         "en": `${baseUrl}/en`,
         "es": `${baseUrl}/es`,
       },
     },
     openGraph: {
-      title: `${title} | Kevin Julio Pineda Portfolio`,
+      title: `${title}`,
       description,
       url: currentUrl,
       siteName: 'Kevin Julio Pineda Portfolio',
@@ -58,7 +55,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} | Kevin Julio Pineda Portfolio`,
+      title: `${title}`,
       description,
       creator: '@kevinjpdev',
     },

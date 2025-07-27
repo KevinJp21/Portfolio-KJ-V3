@@ -14,16 +14,15 @@ interface Messages extends AbstractIntlMessages {
   };
 }
 
-export async function generateMetadata({
-  params
-}: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
+const baseUrl = "https://kevinjp.dev";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const messages = await getMessages({locale}) as Messages;
+  const messages = await getMessages({ locale }) as Messages;
+
   const title = messages.Blog.metaData?.title;
   const description = messages.Blog.metaData?.description;
-  const baseUrl = "https://kevinjp.dev";
+
   const currentUrl = locale === 'es' ? `${baseUrl}/es/blog` : `${baseUrl}/en/blog`;
 
   return {
@@ -32,15 +31,16 @@ export async function generateMetadata({
     authors: [{ name: 'Kevin Julio Pineda' }],
     creator: 'Kevin Julio Pineda',
     publisher: 'Kevin Julio Pineda',
+    metadataBase: new URL(baseUrl),
     formatDetection: {
       email: false,
       address: false,
       telephone: false,
     },
-    metadataBase: new URL(baseUrl),
     alternates: {
       canonical: currentUrl,
       languages: {
+        "x-default": `${baseUrl}/es/blog`,
         "en": `${baseUrl}/en/blog`,
         "es": `${baseUrl}/es/blog`,
       },
@@ -50,7 +50,7 @@ export async function generateMetadata({
       description,
       url: currentUrl,
       siteName: 'Kevin Julio Pineda Portfolio',
-      locale: locale,
+      locale: locale === 'es' ? 'es_ES' : 'en_US',
       type: 'website',
     },
     twitter: {

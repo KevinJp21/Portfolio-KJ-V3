@@ -13,6 +13,8 @@
 
 # testing
 /coverage
+/start-server.cjs
+/test.bat
 
 # next.js
 /.next/
