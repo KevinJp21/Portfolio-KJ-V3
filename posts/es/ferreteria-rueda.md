@@ -2,14 +2,14 @@
 title: "Ferretería Rueda - Tienda Online Oficial"
 publishedTime: "2025-05-10"
 modifiedTime: "2025-05-10"
-image: "https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda-4SL4sGq58fvYkcTFM35hFtV2eEWT91.webp"
+image: "https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda.webp"
 languages: ["Shopify", "JavaScript"]
 demo: "https://ferreteriarueda.com/"
 description: "Primer canal de ventas online para Ferretería Rueda, desarrollado desde cero con Liquid y JavaScript. Proyecto realizado por Kevin Julio Pineda."
 keywords: "shopify liquid desarrollo, ecommerce ferretería, tienda online personalizada, desarrollo tienda shopify, javascript frontend, ferretería rueda tienda, desarrollo e-commerce Colombia, desarrollador Shopify Liquid, Kevin Julio Pineda, desarrollador web,"
 ---
 
-![Ferretería Rueda - Tienda Online](https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda-4SL4sGq58fvYkcTFM35hFtV2eEWT91.webp)
+![Ferretería Rueda - Tienda Online](https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda.webp)
 
 **Ferretería Rueda - Tienda Online Oficial** es un proyecto real de e-commerce desarrollado para transformar digitalmente a una ferretería tradicional con más de 30 años de historia en Barranquilla, Colombia. Hasta el momento del proyecto, la empresa no contaba con ventas en línea ni presencia en canales digitales más allá de redes sociales.
 

@@ -2,14 +2,14 @@
 title: "Ferretería Rueda - Official Online Store"
 publishedTime: "2025-05-10"
 modifiedTime: "2025-05-10"
-image: "https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda-4SL4sGq58fvYkcTFM35hFtV2eEWT91.webp"
+image: "https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda.webp"
 languages: ["Shopify", "JavaScript"]
 demo: "https://ferreteriarueda.com/"
 description: "First online sales channel for Ferretería Rueda, developed from scratch using Liquid and JavaScript. Project by Kevin Julio Pineda."
 keywords: "shopify liquid development, hardware store ecommerce, custom online store, shopify store developer, frontend javascript, ferretería rueda online, ecommerce development Colombia, Shopify Liquid developer, Kevin Julio Pineda, web developer"
 ---
 
-![Ferretería Rueda - Online Store](https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda-4SL4sGq58fvYkcTFM35hFtV2eEWT91.webp)
+![Ferretería Rueda - Online Store](https://c98agni2tvccp34z.public.blob.vercel-storage.com/ferreteria-rueda.webp)
 
 **Ferretería Rueda - Official Online Store** is a real-world e-commerce project built to digitally transform a traditional hardware business with over 30 years of experience in Barranquilla, Colombia. Before this project, the company had no online sales channel or web presence beyond social media.
 
