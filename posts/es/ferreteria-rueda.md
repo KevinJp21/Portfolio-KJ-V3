@@ -53,4 +53,4 @@ Todo esto permitió abrir una nueva etapa para el negocio, con potencial de crec
 
 ## Conclusión
 
-Este proyecto fue un caso de transformación real: pasar de cero presencia online a una tienda operativa, moderna y pensada para escalar. Me permitió afianzar mis habilidades en **Shopify + Liquid** y comprender cómo aplicar desarrollo frontend personalizado dentro de un entorno estructurado para e-commerce. Más que un reto técnico, fue una solución concreta que ayudó a una emp
+Este proyecto fue un caso de transformación real: pasar de cero presencia online a una tienda operativa, moderna y pensada para escalar. Me permitió afianzar mis habilidades en **Shopify + Liquid** y comprender cómo aplicar desarrollo frontend personalizado dentro de un entorno estructurado para e-commerce. Más que un reto técnico, fue una solución práctica que ayudó a una empresa a dar un gran paso hacia el mundo digital.
