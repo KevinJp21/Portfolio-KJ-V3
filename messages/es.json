@@ -13,17 +13,17 @@
     },
     "Home": {
         "name": "Hey, Soy Kevin Julio",
-        "content": "**Ingeniero de Sistemas enfocado en el Desarrollo Full-Stack**. De Colombia co. Especializado en el desarrollo de aplicaciones web.",
+        "content": "**Ingeniero de Sistemas y Desarrollador Frontend** con conocimientos Full-Stack. Especializado en el desarrollo de aplicaciones web modernas.",
         "btnCV": "Descargar CV",
         "btnContact": "Contactame",
         "metaData": {
             "title": "Kevin Julio Pineda | Portfolio",
-            "description": "Soy Kevin Julio Pineda (KevinJp), ingeniero de sistemas especializado en desarrollo Full-Stack. Descubre mis proyectos, habilidades y experiencia profesional en este portafolio."
+            "description": "Soy Kevin Julio Pineda (KevinJp), ingeniero de sistemas y desarrollador frontend con conocimientos full-stack. Descubre mis proyectos, habilidades y experiencia profesional en este portafolio."
         }
     },
     "About": {
         "title": "Acerca de mí",
-        "content": "Mi nombre es **Kevin Julio Pineda** y soy un **ingeniero de sistemas especializado en desarrollo Full-Stack**. Durante mi formación universitaria, participé activamente en diversas **ferias tecnológicas**, lo que me permitió **ampliar mis conocimientos y habilidades** en el campo de la ingeniería de sistemas.\n\nA lo largo de mi carrera, he **dirigido múltiples proyectos** desde la fase inicial hasta el despliegue, utilizando **metodologías ágiles** y **patrones de diseño** para asegurar que cada proyecto se complete de manera eficiente y cumpla con los más altos estándares de calidad.\n\nMi objetivo es seguir creciendo profesionalmente y contribuir a la **creación de soluciones tecnológicas innovadoras** que **mejoren la experiencia del usuario**. Me apasiona aplicar las mejores prácticas en el desarrollo de software, asegurando la creación de **aplicaciones intuitivas y funcionales**."
+        "content": "Mi nombre es **Kevin Julio Pineda** y soy un **ingeniero de sistemas y desarrollador frontend con conocimientos full-stack** y experiencia en la creación de aplicaciones web modernas utilizando React y Next.js.\n\nHe participado en el desarrollo de proyectos reales desde cero, integrando servicios backend, manejando estados complejos, autenticación, validaciones y construcción de interfaces dinámicas enfocadas en rendimiento, escalabilidad y experiencia de usuario.\n\nCuento con experiencia en tecnologías backend como APIs REST, bases de datos y servicios del lado del servidor, lo que me permite comprender el flujo completo de una aplicación web y aportar una visión integral al desarrollo frontend.\n\nA lo largo de mi trayectoria profesional, he trabajado bajo metodologías ágiles, aplicando buenas prácticas de arquitectura, patrones de diseño y calidad de código para construir soluciones mantenibles y bien estructuradas.\n\nMi objetivo es seguir creciendo como Frontend Developer, fortalecer mis habilidades full-stack y contribuir al desarrollo de productos digitales que generen impacto real en los usuarios y en el negocio."
     },
     "Projects": {
         "title": "Proyectos",

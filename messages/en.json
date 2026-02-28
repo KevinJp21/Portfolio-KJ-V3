@@ -13,17 +13,17 @@
     },
     "Home": {
         "name": "Hey, I'm Kevin Julio",
-        "content": "**Systems Engineer focused in Full-Stack Development**. From Colombia co. specialized in web application development.",
+        "content": "**Systems Engineer and Frontend Developer** with full-stack knowledge. Specialized in building modern web applications.",
         "btnCV": "Download CV",
         "btnContact": "Contact me",
         "metaData": {
             "title": "Kevin Julio Pineda | Portfolio",
-            "description": "I'm Kevin Julio Pineda (KevinJp), a systems engineer specialized in Full-Stack development. Explore my portfolio to see my projects, skills, and professional experience."
+            "description": "I'm Kevin Julio Pineda (KevinJp), a systems engineer and frontend developer with full-stack knowledge. Explore my portfolio to discover my projects, skills, and professional experience."
         }
     },
     "About": {
         "title": "About Me",
-        "content": "My name is **Kevin Julio Pineda** and I am a **systems engineer specialized in Full-Stack development**. During my university education, I actively participated in various **technology fairs**, which allowed me to **expand my knowledge and skills** in the field of systems engineering.\n\nThroughout my career, I have **led multiple projects** from the initial phase to deployment, using **agile methodologies** and **design patterns** to ensure that each project is completed efficiently and meets the highest quality standards.\n\nMy goal is to continue growing professionally and contribute to the **creation of innovative technological solutions** that **enhance the user experience**. I am passionate about applying best practices in software development, ensuring the creation of **intuitive and functional applications**."
+        "content": "My name is **Kevin Julio Pineda** and I am a **systems engineer and frontend developer with full-stack knowledge**, experienced in building modern web applications using React and Next.js.\n\nI have participated in the development of real-world projects from scratch, integrating backend services, handling complex state management, authentication, validations, and building dynamic interfaces focused on performance, scalability, and user experience.\n\nI have experience working with backend technologies such as REST APIs and databases, which allows me to understand the complete flow of a web application and contribute with a holistic perspective to frontend development.\n\nThroughout my professional journey, I have worked under agile methodologies, applying best practices in architecture, design patterns, and code quality to build maintainable and well-structured solutions.\n\nMy goal is to continue growing as a Frontend Developer, strengthen my full-stack skills, and contribute to building impactful digital products for users and businesses."
     },
     "Projects": {
         "title": "Projects",
